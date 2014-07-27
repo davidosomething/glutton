@@ -1,12 +1,15 @@
 module.exports = (grunt)->
-
-  # Project configuration.
   grunt.initConfig
     pkg:    grunt.file.readJSON('package.json')
+
+################################################################################
+
     banner: '/*! <%= pkg.title || pkg.name %> - v<%= pkg.version %>\n' +
       '<%= pkg.homepage ? " * " + pkg.homepage + "\\n" : "" %>' +
       ' * Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author.name %>' +
       ' */\n'
+
+################################################################################
 
     coffeelint:
       gruntfile:
@@ -14,6 +17,8 @@ module.exports = (grunt)->
           configFile: 'coffeelint.json'
         files:
           src: 'Gruntfile.coffee'
+
+################################################################################
 
     sass:
       options:
@@ -33,16 +38,24 @@ module.exports = (grunt)->
           ext:      '.css'
         ]
 
+################################################################################
+
     scsslint:
       all:
         files: '<%= sass.all.files.src %>'
+
+################################################################################
 
     watch:
       sass:
         files: '<%= sass.all.files.src %>'
         tasks: [ 'scsslint', 'sass', 'autoprefixer' ]
 
+################################################################################
+
   require('load-grunt-tasks')(grunt)
+
+################################################################################
 
   grunt.registerTask 'lint', 'Lint', [
     'coffeelint'
@@ -55,15 +68,11 @@ module.exports = (grunt)->
   ]
 
   grunt.registerTask 'build', 'Build theme for release', [
-    'test'
-    'clean'
-    'js'
-    'css'
-    'hashmap'
+    'coffee'
+    'sass'
   ]
 
   grunt.registerTask 'default', [
-    'test'
     'build'
     'watch'
   ]
