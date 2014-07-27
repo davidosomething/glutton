@@ -1,0 +1,14 @@
+{
+  "name": "glutton",
+  "version": "0.0.0",
+  "description": "Backbone.js powered WordPress theme for DavidOSomething.com",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
