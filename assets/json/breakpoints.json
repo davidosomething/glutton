@@ -1,0 +1,15 @@
+{
+  "width": {
+    "iphone-portrait": "320px",
+    "iphone-landscape": "480px",
+    "iphone-retina-portrait": "640px",
+    "iphone-retina-landscape": "960px",
+    "iphone5-portrait": "640px",
+    "iphone5-landscape": "1136px",
+    "desktop": "960px",
+    "ipad-landscape": "768px",
+    "ipad-portrait": "1024px",
+    "ipad-retina-portrait": "1536px",
+    "ipad-retina-landscape": "2048px"
+  }
+}
