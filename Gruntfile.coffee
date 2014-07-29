@@ -10,6 +10,12 @@ module.exports = (grunt)->
       ' */\n'
 
 ################################################################################
+    clean:
+      static:
+        css:  [ 'static/assets/js/*' ]
+        js:   [ 'static/assets/css/*' ]
+
+################################################################################
 
     coffeelint:
       gruntfile:
@@ -32,9 +38,9 @@ module.exports = (grunt)->
       all:
         files: [
           expand:   true
-          cwd:      ''
-          src:      'assets/sass/**/*.scss'
-          dest:     'dist'
+          cwd:      'assets/sass/'
+          src:      '**/*.scss'
+          dest:     'static/assets/css'
           ext:      '.css'
         ]
 
@@ -42,13 +48,13 @@ module.exports = (grunt)->
 
     scsslint:
       all:
-        files: '<%= sass.all.files.src %>'
+        files: 'assets/sass/**/*.scss'
 
 ################################################################################
 
     watch:
       sass:
-        files: '<%= sass.all.files.src %>'
+        files: '<%= scsslint.all.files %>'
         tasks: [ 'scsslint', 'sass', 'autoprefixer' ]
 
 ################################################################################
