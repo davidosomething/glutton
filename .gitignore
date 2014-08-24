@@ -1,3 +1,6 @@
-bower_components/
-static/
+# dev tools
 node_modules/
+
+# compiled
+static/
+tmp/
