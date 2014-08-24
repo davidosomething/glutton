@@ -15,12 +15,22 @@
   "author": "David O'Trakoun <me@davidosomething.com> (http://davidosomething.com/)",
   "devDependencies": {
     "blanket": "^1.1.6",
+    "broccoli": "^0.12.3",
+    "broccoli-browserify": "^0.1.0",
+    "broccoli-coffee": "^0.1.0",
+    "broccoli-env": "0.0.1",
+    "broccoli-merge-trees": "^0.1.4",
+    "broccoli-ruby-sass": "^0.2.0",
+    "broccoli-sass": "^0.2.2",
+    "broccoli-static-compiler": "^0.1.4",
+    "broccoli-uglify-js": "^0.1.3",
     "codo": "^2.0.9",
     "coffeelint": "^1.5.2",
     "coffeelint-stylish": "^0.1.0",
     "grunt": "^0.4.5",
     "grunt-autoprefixer": "^0.8.2",
     "grunt-blanket-mocha": "^0.4.1",
+    "grunt-broccoli": "^0.3.4",
     "grunt-bump": "0.0.14",
     "grunt-coffeelint": "0.0.10",
     "grunt-contrib-clean": "^0.5.0",
@@ -33,5 +43,8 @@
     "grunt-notify": "^0.3.0",
     "grunt-scsslint": "^0.1.0",
     "load-grunt-tasks": "^0.6.0"
+  },
+  "dependencies": {
+    "broccoli-autoprefixer": "^1.1.0"
   }
 }

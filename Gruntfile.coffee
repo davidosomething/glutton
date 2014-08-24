@@ -10,10 +10,11 @@ module.exports = (grunt)->
       ' */\n'
 
 ################################################################################
-    clean:
-      static:
-        css:  [ 'static/assets/js/*' ]
-        js:   [ 'static/assets/css/*' ]
+
+    broccoli:
+      dev:
+        config: 'Brocfile.js'
+        dest: 'static'
 
 ################################################################################
 
@@ -26,36 +27,9 @@ module.exports = (grunt)->
 
 ################################################################################
 
-    sass:
-      options:
-        debugInfo:  true
-        trace:      true
-        loadPath:   [ 'assets/json' ]
-        precision:  9
-        require:    [ 'sass-json-vars' ]
-        sourcemap:  true
-        style:      'compact'
-      all:
-        files: [
-          expand:   true
-          cwd:      'assets/sass/'
-          src:      '**/*.scss'
-          dest:     'static/assets/css'
-          ext:      '.css'
-        ]
-
-################################################################################
-
     scsslint:
       all:
         files: 'assets/sass/**/*.scss'
-
-################################################################################
-
-    watch:
-      sass:
-        files: '<%= scsslint.all.files %>'
-        tasks: [ 'scsslint', 'sass', 'autoprefixer' ]
 
 ################################################################################
 
@@ -68,22 +42,11 @@ module.exports = (grunt)->
     'scsslint'
   ]
 
-  grunt.registerTask 'css', 'Build CSS', [
-    'sass'
-    'autoprefixer'
-  ]
-
   grunt.registerTask 'build', 'Build theme for release', [
-    'coffee'
-    'sass'
+    'broccoli:dev:build'
   ]
 
   grunt.registerTask 'default', [
     'build'
-    'watch'
-  ]
-
-  grunt.registerTask 'release', 'Build and imageoptim', [
-    'build'
-    'newer:imageoptim'
+    'broccoli:dev:watch'
   ]
