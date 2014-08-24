@@ -1,27 +1,56 @@
 module.exports = (grunt)->
   grunt.initConfig
-    pkg:    grunt.file.readJSON('package.json')
+    pkg: grunt.file.readJSON('package.json')
 
 ################################################################################
-
-    banner: '/*! <%= pkg.title || pkg.name %> - v<%= pkg.version %>\n' +
-      '<%= pkg.homepage ? " * " + pkg.homepage + "\\n" : "" %>' +
-      ' * Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author.name %>' +
-      ' */\n'
-
-################################################################################
+# SASS through broccoli
+# Note this task cleans the dest dir before run
 
     broccoli:
-      dev:
+      dist:
         config: 'Brocfile.js'
-        dest: 'static'
+        dest: 'static/assets'
+
+################################################################################
+# CoffeeScript through browserify
+
+    browserify:
+      options:
+        browserifyOptions:
+          extensions: [ '.coffee' ]
+        bundleOptions:
+          debug: true
+
+        # use this since we use bower instead of NPM for components
+        # alphabetically
+        alias: [
+          './bower_components/backbone/backbone.js:backbone'
+          './bower_components/jquery/dist/jquery.js:jquery'
+          './bower_components/lodash/dist/lodash.underscore.js:underscore'
+        ]
+
+        transform: [
+          'coffeeify'
+          # 'browserify-shim'
+          #'uglifyify'
+        ]
+      dist:
+        files:
+          'static/app/app.js': [ 'app/app.coffee' ]
+      watch:
+        options:
+          watch: true
+        files: '<%= browserify.dist.files %>'
 
 ################################################################################
 
     coffeelint:
+      options:
+        configFile: 'coffeelint.json'
+      app:
+        files:
+          src: 'app/**/*.coffee'
       gruntfile:
-        options:
-          configFile: 'coffeelint.json'
         files:
           src: 'Gruntfile.coffee'
 
@@ -32,10 +61,12 @@ module.exports = (grunt)->
         files: 'assets/sass/**/*.scss'
 
 ################################################################################
+# Module loading
 
   require('load-grunt-tasks')(grunt)
 
 ################################################################################
+# Multitask configuration
 
   grunt.registerTask 'lint', 'Lint', [
     'coffeelint'
@@ -43,10 +74,12 @@ module.exports = (grunt)->
   ]
 
   grunt.registerTask 'build', 'Build theme for release', [
-    'broccoli:dev:build'
+    'broccoli:dist:build'
+    'browserify:dist'
   ]
 
   grunt.registerTask 'default', [
     'build'
-    'broccoli:dev:watch'
+    'broccoli:dist:watch'
+    'browserify:watch'
   ]

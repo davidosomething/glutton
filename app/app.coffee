@@ -1,8 +1,6 @@
 # Glutton App
 # main app entry point
 
-# Backbone = require('backbone')
-# $ = require('jquery')
-# Backbone.$ = $
-#
-console.log 'hi'
+Backbone = require('backbone')
+$ = require('jquery')
+Backbone.$ = $

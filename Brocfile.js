@@ -9,34 +9,6 @@ assets = pickFiles(assets, {
   destDir: 'assets'
 });
 
-var app = 'app';
-app = pickFiles(app, {
-  srcDir: '/',
-  destDir: 'app'
-});
-
-////////////////////////////////////////////////////////////////////////////////
-// JavaScript
-////////////////////////////////////////////////////////////////////////////////
-
-var filterCs = require('broccoli-coffee');
-var browserify = require('broccoli-browserify');
-var uglifyJs = require('broccoli-uglify-js');
-
-app = filterCs(app, {
-  bare: true
-});
-app = browserify(app, {
-  entries:    [ 'app/app.js' ],
-  outputFile: 'app/app.js',
-  browserify: {},
-  bundle:     {},
-  require:    [],
-});
-app = uglifyJs(app, {
-  compress: true
-})
-
 ////////////////////////////////////////////////////////////////////////////////
 // SASS
 ////////////////////////////////////////////////////////////////////////////////
@@ -52,4 +24,5 @@ var css = compileSass([ assets ], 'assets/sass/main.scss', 'assets/css/main.css'
 // Finalization
 ////////////////////////////////////////////////////////////////////////////////
 
-module.exports = mergeTrees([ app, css ]);
+// module.exports = mergeTrees([ app, css ]);
+module.exports = css;
