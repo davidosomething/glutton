@@ -1,6 +1,9 @@
 # dev tools
 node_modules/
 
+# managed
+vendor/
+
 # compiled
 doc/
 static/

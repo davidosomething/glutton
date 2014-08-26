@@ -13,6 +13,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  sass (~> 3.3.11)
+  sass (~> 3.3.14)
   sass-json-vars (~> 0.3.2)
   scss-lint (~> 0.27.0)
