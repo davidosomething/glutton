@@ -4,3 +4,7 @@
 Backbone = require('backbone')
 $ = require('jquery')
 Backbone.$ = $
+
+module.exports = ->
+  a = 1
+  return a

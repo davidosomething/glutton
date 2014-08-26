@@ -6,12 +6,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/davidosomething/glutton"
   },
-  "main": "Gruntfile.js",
+  "main": "Gruntfile.coffee",
   "scripts": {
     "precommit": "./githooks/precommit.sh",
-    "test": "npm test"
+    "test": "grunt test"
   },
   "browser": {
     "jquery": "./bower_components/jquery/dist/jquery.min.js"
@@ -31,6 +31,7 @@
     "broccoli-strip-json-comments": "^1.0.0",
     "browserify": "^5.10.1",
     "browserify-shim": "^3.7.0",
+    "chai": "^1.9.1",
     "codo": "^2.0.9",
     "coffeeify": "^0.7.0",
     "coffeelint": "^1.5.2",
@@ -42,11 +43,23 @@
     "grunt-codo": "^0.2.0",
     "grunt-coffeelint": "0.0.13",
     "grunt-contrib-copy": "^0.5.0",
+    "grunt-coveralls": "^1.0.0",
+    "grunt-karma": "^0.8.3",
     "grunt-newer": "^0.7.0",
     "grunt-notify": "^0.3.0",
     "grunt-scsslint": "^0.1.0",
     "grunt-shell": "^1.0.1",
+    "karma": "^0.12.22",
+    "karma-chai": "^0.1.0",
+    "karma-commonjs": "0.0.11",
+    "karma-coverage": "^0.2.6",
+    "karma-mocha": "^0.1.9",
+    "karma-phantomjs-launcher": "^0.1.4",
+    "karma-sinon": "^1.0.3",
+    "karma-spec-reporter": "0.0.13",
     "load-grunt-tasks": "^0.6.0",
+    "mocha": "^1.21.4",
+    "sinon": "^1.10.3",
     "uglifyify": "^2.5.0"
   },
   "dependencies": {}

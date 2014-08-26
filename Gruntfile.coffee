@@ -3,6 +3,7 @@ module.exports = (grunt)->
     pkg: grunt.file.readJSON('package.json')
 
 ################################################################################
+
     bump:
       options:
         files: [
@@ -15,14 +16,6 @@ module.exports = (grunt)->
         commit:        false
         createTag:     false
         push:          false
-
-################################################################################
-# Copy bower components to paths
-# @TODO want to eliminate this step and move to broccoli
-    copy:
-      dist:
-        files:
-          'assets/sass/vendor/_normalize.scss': 'bower_components/normalize.css/normalize.css'
 
 ################################################################################
 # SASS through broccoli
@@ -59,6 +52,11 @@ module.exports = (grunt)->
       dist:
         files:
           'static/app/app.js': [ 'app/app.coffee' ]
+      karma:
+        options:
+          debug: false
+        files:
+          'test/dist/app.js': [ 'test/spec/app.coffee' ]
       watch:
         options:
           watch: true
@@ -84,6 +82,28 @@ module.exports = (grunt)->
       gruntfile:
         files:
           src: 'Gruntfile.coffee'
+
+################################################################################
+# Copy bower components to paths
+# @TODO want to eliminate this step and move to broccoli
+
+    copy:
+      dist:
+        files:
+          'assets/sass/vendor/_normalize.scss': 'bower_components/normalize.css/normalize.css'
+
+################################################################################
+
+    coveralls:
+      options:
+        # src: 'coverage-results/lcov.info',
+        force: true
+
+################################################################################
+
+    karma:
+      test:
+        configFile: 'karma.conf.js'
 
 ################################################################################
 
@@ -120,6 +140,9 @@ module.exports = (grunt)->
   ]
 
   grunt.registerTask 'test', 'Run test suites', [
+    # phpunit
+    'browserify:karma'
+    'karma'
   ]
 
   grunt.registerTask 'document', 'Run documentation generators', [

@@ -6,5 +6,7 @@ vendor/
 
 # compiled
 doc/
+reports/
 static/
+test/dist/
 tmp/
