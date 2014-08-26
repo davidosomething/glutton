@@ -1,5 +1,16 @@
 {
-    "require": {
-        "mustache/mustache": "*"
+  "type": "theme",
+  "name": "davidosomething/glutton",
+  "description": "Backbone.js powered WordPress theme for DavidOSomething.com",
+  "version": "0.0.3",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "David O'Trakoun",
+      "email": "me@davidosomething.com"
     }
+  ],
+  "require": {
+    "mustache/mustache": "~2.6.0"
+  }
 }

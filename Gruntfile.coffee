@@ -3,16 +3,39 @@ module.exports = (grunt)->
     pkg: grunt.file.readJSON('package.json')
 
 ################################################################################
+    bump:
+      options:
+        files: [
+          'bower.json'
+          'composer.json'
+          'package.json'
+          'style.css'
+        ]
+        updateConfigs: []
+        commit:        false
+        createTag:     false
+        push:          false
+
+################################################################################
+# Copy bower components to paths
+# @TODO want to eliminate this step and move to broccoli
+    copy:
+      dist:
+        files:
+          'assets/sass/vendor/_normalize.scss': 'bower_components/normalize.css/normalize.css'
+
+################################################################################
 # SASS through broccoli
 # Note this task cleans the dest dir before run
 
     broccoli:
       dist:
         config: 'Brocfile.js'
-        dest: ''
+        dest: 'static'
 
 ################################################################################
 # CoffeeScript through browserify
+# @TODO want to eliminate this step and move to broccoli-browserify
 
     browserify:
       options:
@@ -41,6 +64,15 @@ module.exports = (grunt)->
         options:
           watch: true
         files: '<%= browserify.dist.files %>'
+
+################################################################################
+
+    codo:
+      options:
+        name: 'Glutton'
+      src: [
+        'app'
+      ]
 
 ################################################################################
 
@@ -83,8 +115,23 @@ module.exports = (grunt)->
 
   grunt.registerTask 'build', 'Build theme for release', [
     'shell:prebuild'
+    'newer:copy:dist'
     'broccoli:dist:build'
     'browserify:dist'
+  ]
+
+  grunt.registerTask 'test', 'Run test suites', [
+  ]
+
+  grunt.registerTask 'document', 'Run documentation generators', [
+  ]
+
+  grunt.registerTask 'release', [
+    'lint'
+    'build'
+    'test'
+    'document'
+    'bump'
   ]
 
   grunt.registerTask 'default', [
