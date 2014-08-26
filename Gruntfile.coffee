@@ -130,7 +130,6 @@ module.exports = (grunt)->
     'build'
     'test'
     'document'
-    'bump'
   ]
 
   grunt.registerTask 'default', [
