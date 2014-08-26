@@ -143,6 +143,7 @@ module.exports = (grunt)->
     # phpunit
     'browserify:karma'
     'karma'
+    'coveralls'
   ]
 
   grunt.registerTask 'document', 'Run documentation generators', [
