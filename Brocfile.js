@@ -18,7 +18,7 @@ var json = pickFiles('assets/json', {
   srcDir: '/',
   destDir: 'assets/json'
 });
-json = stripJsonComments(json)
+json = stripJsonComments(json);
 
 ////////////////////////////////////////////////////////////////////////////////
 // SASS
@@ -49,4 +49,4 @@ var assetManifest = fingerprint.manifest(allAssets, { name: 'manifest.json' })
 // Finalization
 ////////////////////////////////////////////////////////////////////////////////
 
-//# module.exports = mergeTrees([ allAssets, assetManifest ]);
+module.exports = mergeTrees([ allAssets, assetManifest ]);
