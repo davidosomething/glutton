@@ -95,9 +95,10 @@ module.exports = (grunt)->
 ################################################################################
 
     coveralls:
-      options:
-        src: 'reports/coverage/lcov.info',
-        force: true
+      karma:
+        options:
+          src: 'reports/coverage/lcov.info',
+          force: true
 
 ################################################################################
 
