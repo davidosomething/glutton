@@ -1,6 +1,6 @@
 {
   "name": "glutton",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Backbone.js powered WordPress theme for DavidOSomething.com",
   "author": "David O'Trakoun <me@davidosomething.com> (http://davidosomething.com/)",
   "license": "MIT",
@@ -22,7 +22,6 @@
   "devDependencies": {
     "broccoli": "^0.12.3",
     "broccoli-autoprefixer": "^1.1.0",
-    "broccoli-concat-filenames": "^0.1.1",
     "broccoli-csso": "^1.0.0",
     "broccoli-env": "0.0.1",
     "broccoli-fingerprint": "0.0.4",
@@ -39,7 +38,10 @@
     "grunt-broccoli": "^0.3.4",
     "grunt-browserify": "^2.1.4",
     "grunt-bump": "0.0.14",
+    "grunt-codo": "^0.2.0",
     "grunt-coffeelint": "0.0.10",
+    "grunt-contrib-copy": "^0.5.0",
+    "grunt-newer": "^0.7.0",
     "grunt-notify": "^0.3.0",
     "grunt-scsslint": "^0.1.0",
     "grunt-shell": "^1.0.1",
