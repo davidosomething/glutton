@@ -1,7 +1,7 @@
 <?php
 /**
  * index.php
- * Controller for index
+ * View-Controller for index
  */
 
 class IndexView implements GluttonView
@@ -11,9 +11,19 @@ class IndexView implements GluttonView
 	}
 
 	public function render() {
+		get_header();
+		get_footer();
 
+		$globalHeader = new HeaderView();
+		$globalHeader->render();
+
+		Glutton::template( 'body.php' );
+
+		$globalFooter = new FooterView();
+		$globalFooter->render();
 	}
 
 }
 
-new IndexView();
+$v = new IndexView();
+$v->render();

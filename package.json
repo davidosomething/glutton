@@ -22,7 +22,10 @@
   "devDependencies": {
     "broccoli": "^0.12.3",
     "broccoli-autoprefixer": "^1.1.0",
+    "broccoli-concat-filenames": "^0.1.1",
+    "broccoli-csso": "^1.0.0",
     "broccoli-env": "0.0.1",
+    "broccoli-fingerprint": "0.0.4",
     "broccoli-merge-trees": "^0.1.4",
     "broccoli-ruby-sass": "^0.2.0",
     "broccoli-static-compiler": "^0.1.4",
@@ -39,6 +42,7 @@
     "grunt-coffeelint": "0.0.10",
     "grunt-notify": "^0.3.0",
     "grunt-scsslint": "^0.1.0",
+    "grunt-shell": "^1.0.1",
     "load-grunt-tasks": "^0.6.0",
     "uglifyify": "^2.5.0"
   },

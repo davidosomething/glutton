@@ -9,7 +9,7 @@ module.exports = (grunt)->
     broccoli:
       dist:
         config: 'Brocfile.js'
-        dest: 'static/assets'
+        dest: ''
 
 ################################################################################
 # CoffeeScript through browserify
@@ -61,6 +61,14 @@ module.exports = (grunt)->
         files: 'assets/sass/**/*.scss'
 
 ################################################################################
+
+    shell:
+      prebuild:
+        command: [
+          'npm prune'
+        ].join('&&')
+
+################################################################################
 # Module loading
 
   require('load-grunt-tasks')(grunt)
@@ -74,6 +82,7 @@ module.exports = (grunt)->
   ]
 
   grunt.registerTask 'build', 'Build theme for release', [
+    'shell:prebuild'
     'broccoli:dist:build'
     'browserify:dist'
   ]
