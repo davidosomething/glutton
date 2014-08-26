@@ -11,20 +11,22 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
+      //'test/spec/app.coffee'
       'test/dist/app.js'
     ],
 
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
-      'app/**/*.coffee': ['commonjs', 'coverage'], // coverage also runs coffee
-      'test/dist/**/*.js': ['commonjs'],
+      //'app/**/*.coffee': ['browserify'], // coverage also runs coffee
+      //'test/spec/**/*.coffee': ['coffee', 'commonjs'],
+      'test/dist/app.js': ['commonjs', 'coverage'],
     },
 
     coffeePreprocessor: {
       options: {
-        bare:       true,
-        sourceMap:  false
+        bare: true,
+        sourceMap: false
       },
       transformPath: function(path) {
         return path.replace(/\.coffee$/, '.js');

@@ -16,9 +16,6 @@
   "browser": {
     "jquery": "./bower_components/jquery/dist/jquery.min.js"
   },
-  "browserify-shim": {
-    "jquery": "$"
-  },
   "devDependencies": {
     "broccoli": "^0.12.3",
     "broccoli-autoprefixer": "^1.1.0",
@@ -30,7 +27,6 @@
     "broccoli-static-compiler": "^0.1.4",
     "broccoli-strip-json-comments": "^1.0.0",
     "browserify": "^5.10.1",
-    "browserify-shim": "^3.7.0",
     "chai": "^1.9.1",
     "codo": "^2.0.9",
     "coffeeify": "^0.7.0",
@@ -51,6 +47,7 @@
     "grunt-shell": "^1.0.1",
     "karma": "^0.12.22",
     "karma-chai": "^0.1.0",
+    "karma-coffee-preprocessor": "^0.2.1",
     "karma-commonjs": "0.0.11",
     "karma-coverage": "^0.2.6",
     "karma-mocha": "^0.1.9",
