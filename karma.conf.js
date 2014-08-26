@@ -12,6 +12,7 @@ module.exports = function(config) {
     // list of files / patterns to load in the browser
     files: [
       //'test/spec/app.coffee'
+      'static/app/app.js',
       'test/dist/app.js'
     ],
 
@@ -20,18 +21,19 @@ module.exports = function(config) {
     preprocessors: {
       //'app/**/*.coffee': ['browserify'], // coverage also runs coffee
       //'test/spec/**/*.coffee': ['coffee', 'commonjs'],
-      'test/dist/app.js': ['commonjs', 'coverage'],
+      'static/app/app.js': ['commonjs', 'coverage'],
+      'test/dist/app.js': ['commonjs'],
     },
 
-    coffeePreprocessor: {
-      options: {
-        bare: true,
-        sourceMap: false
-      },
-      transformPath: function(path) {
-        return path.replace(/\.coffee$/, '.js');
-      }
-    },
+    // coffeePreprocessor: {
+    //   options: {
+    //     bare: true,
+    //     sourceMap: false
+    //   },
+    //   transformPath: function(path) {
+    //     return path.replace(/\.coffee$/, '.js');
+    //   }
+    // },
 
     // test results reporter to use
     // possible values: 'dots', 'progress'

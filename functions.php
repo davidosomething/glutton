@@ -1,6 +1,10 @@
 <?php
 require_once __DIR__ . '/vendor/autoload.php';
 
+wp_enqueue_script('glutton-main',
+	get_stylesheet_directory_uri() . '/static/app/app.js'
+);
+
 class Glutton
 {
 	static public function asset() {
