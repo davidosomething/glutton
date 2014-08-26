@@ -1,4 +1,4 @@
-{
+{ // comments are stripped in the broccoli build process
   "width": {
     "iphone-portrait": "320px",
     "iphone-landscape": "480px",

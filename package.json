@@ -28,6 +28,7 @@
     "broccoli-merge-trees": "^0.1.4",
     "broccoli-ruby-sass": "^0.2.0",
     "broccoli-static-compiler": "^0.1.4",
+    "broccoli-strip-json-comments": "^1.0.0",
     "browserify": "^5.10.1",
     "browserify-shim": "^3.7.0",
     "codo": "^2.0.9",
