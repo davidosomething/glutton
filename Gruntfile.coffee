@@ -40,9 +40,8 @@ module.exports = (grunt)->
     browserify:
       options:
         browserifyOptions:
-          extensions: [ '.coffee' ]
-        browserifyOptions:
           debug: true
+          extensions: [ '.coffee' ]
 
         # use this since we use bower instead of NPM for components
         # alphabetically
