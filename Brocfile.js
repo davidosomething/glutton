@@ -2,8 +2,6 @@ var env = require('broccoli-env').getEnv();
 
 var mergeTrees = require('broccoli-merge-trees');
 var pickFiles = require('broccoli-static-compiler');
-var concatFilenames = require('broccoli-concat-filenames');
-
 var fingerprint = require('broccoli-fingerprint');
 
 var assets = 'assets';
