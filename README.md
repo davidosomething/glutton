@@ -6,6 +6,36 @@
 
 > Backbone.js powered WordPress theme for DavidOSomething.com
 
+## Paths
+
+### Working
+
+Edit files in these paths
+
+- `.travis/` - travis VM config
+- `assets/` - test fixtures, shims, etc
+- `app/` - app coffee
+- `spec/` - test specs
+- `templates/` - Mustache templates
+- `test/` - test fixtures, shims, etc
+
+### Generated
+
+Task runner will generate files into these paths
+
+- `doc/` - app documentation
+- `reports/` - app reports, code coverage
+- `static/` - compiled/optimized assets
+
+### Managed
+
+Managed by package managers and tmp folders
+
+- `bower_components/`
+- `node_modules/`
+- `tmp/` - broccoli cache
+- `.sass-cache/` - sass cache
+
 ## Other badges and stuff
 [ ![Codeship Status for davidosomething/glutton][codeshipBadge]][codeshipLink]
 

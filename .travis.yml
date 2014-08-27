@@ -37,4 +37,5 @@ install:
 
 script:
   - grunt release
+  - grunt coveralls
 

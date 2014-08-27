@@ -135,7 +135,6 @@ module.exports = (grunt)->
   grunt.registerTask 'test', 'Run test suites', [
     # phpunit
     'karma'
-    'coveralls'
   ]
 
   grunt.registerTask 'document', 'Run documentation generators', [

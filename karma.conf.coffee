@@ -4,7 +4,7 @@ module.exports = (config)->
     browsers:  [ 'PhantomJS' ]
     port:      9876
 
-    frameworks: ['mocha', 'chai', 'sinon'],
+    frameworks: ['mocha', 'chai', 'sinon']
 
     files: [
       #
@@ -13,6 +13,9 @@ module.exports = (config)->
       # this is to support commonJs by defining require()
       'bower_components/commonjs-require-definition/require.js'
       # add more here, like backbone, jquery, etc.
+      'bower_components/lodash/dist/lodash.underscore.js'
+      'bower_components/backbone/backbone.js'
+      'test/shim.coffee'
 
       #
       # things to test
@@ -28,7 +31,8 @@ module.exports = (config)->
     preprocessors:
       # the coverage preprocessor runs Ibrik to compile coffee
       'app/**/*.coffee':  ['commonjs', 'coverage']
-      'spec/**/*.coffee': ['commonjs']
+      'spec/**/*.coffee': ['coffee']
+      'test/**/*.coffee': ['coffee']
 
     commonjsPreprocessor:
       options:
@@ -48,3 +52,4 @@ module.exports = (config)->
     colors: true
     autoWatch: true
     singleRun: true
+

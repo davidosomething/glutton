@@ -29,6 +29,7 @@
     "browserify": "^5.10.1",
     "chai": "^1.9.1",
     "codo": "^2.0.9",
+    "coffee-script": "^1.8.0",
     "coffeeify": "^0.7.0",
     "coffeelint": "^1.5.2",
     "coffeelint-stylish": "^0.1.0",
