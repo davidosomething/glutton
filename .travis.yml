@@ -19,11 +19,14 @@ php:
 
 before_install:
   - npm install -g grunt-cli
+  - npm install -g bower
 
 install:
   - bundle install
   - composer install
   - npm install
+  - bower install
+
 #  - sudo apt-get install apache2 libapache2-mod-fastcgi
 # # enable php-fpm
 # - sudo cp ~/.phpenv/versions/$(phpenv version-name)/etc/php-fpm.conf.default ~/.phpenv/versions/$(phpenv version-name)/etc/php-fpm.conf
