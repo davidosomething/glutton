@@ -1,4 +1,25 @@
 module.exports = (grunt)->
+
+  _ = require('lodash')
+
+################################################################################
+
+  libs = require('./config/browserify-shim.coffee')
+
+  getBrowserifyAlias = (name)->
+    return libs[name].path + ':' + name
+
+  getBrowserifyLibs = (libs)->
+    return _.keys(libs)
+
+  getBrowserifyAliases = (libs)->
+    aliases = _.reduce(libs, (aliasesArray, path, name)->
+      aliasesArray.push getBrowserifyAlias(name)
+      return aliasesArray
+    , [])
+
+################################################################################
+
   grunt.initConfig
     pkg: grunt.file.readJSON('package.json')
 
@@ -29,29 +50,39 @@ module.exports = (grunt)->
 ################################################################################
 # CoffeeScript through browserify
 # @TODO want to eliminate this step and move to broccoli-browserify
+# alternatively run browserify itself through grunt-shell
+#
+# The "extensions" browserifyOption has to exist for each task
+# doesn't inherit from parent options
 
     browserify:
       options:
-        # use this since we use bower instead of NPM for components
-        # alphabetically
-        alias: [
-          './bower_components/backbone/backbone.js:backbone'
-          './bower_components/jquery/dist/jquery.js:jquery'
-          './bower_components/lodash/dist/lodash.underscore.js:underscore'
-        ]
         transform: [ 'coffeeify' ]
-      dist:
+      lib:
+        options:
+          # use this since we use bower instead of NPM for components
+          # alphabetically
+          alias: getBrowserifyAliases(libs)
+          browserifyOptions:
+            debug: false
+            extensions: [ '.coffee', '.js', '.json' ]
+            noparse: [ 'jquery' ]
+          external: null
+        files:
+          'static/app/lib.js': [ '.' ]
+      app:
         options:
           browserifyOptions:
             debug: true
             extensions: [ '.coffee', '.js', '.json' ]
-            noparse: [ 'jquery' ]
+          # use things in lib
+          external: getBrowserifyLibs(libs)
         files:
           'static/app/app.js': [ 'app/**/*.coffee' ]
       watch:
         options:
           watch: true
-        files: '<%= browserify.dist.files %>'
+        files: '<%= browserify.app.files %>'
 
 ################################################################################
 
@@ -125,7 +156,8 @@ module.exports = (grunt)->
     'shell:prebuild'
     'newer:copy:dist'
     'broccoli:dist:build'
-    'browserify:dist'
+    'browserify:lib'
+    'browserify:app'
   ]
 
   grunt.registerTask 'test', 'Run test suites', [
