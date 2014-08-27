@@ -17,5 +17,8 @@
     "lodash": "~2.4.1",
     "normalize.css": "~3.0.1",
     "html5-boilerplate": "~4.3.0"
+  },
+  "devDependencies": {
+    "commonjs-require-definition": "~0.1.2"
   }
 }

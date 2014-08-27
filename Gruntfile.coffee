@@ -34,7 +34,7 @@ module.exports = (grunt)->
       options:
         browserifyOptions:
           debug: true
-          extensions: [ '.coffee' ]
+          extensions: [ '.coffee', '.js' ]
 
         # use this since we use bower instead of NPM for components
         # alphabetically
@@ -51,12 +51,7 @@ module.exports = (grunt)->
         ]
       dist:
         files:
-          'static/app/app.js': [ 'app/app.coffee' ]
-      karma:
-        options:
-          debug: false
-        files:
-          'test/dist/app.js': [ 'test/spec/app.coffee' ]
+          'static/app/app.js': [ 'app/**/*.coffee' ]
       watch:
         options:
           watch: true
@@ -76,12 +71,9 @@ module.exports = (grunt)->
     coffeelint:
       options:
         configFile: 'coffeelint.json'
-      app:
-        files:
-          src: 'app/**/*.coffee'
-      gruntfile:
-        files:
-          src: 'Gruntfile.coffee'
+      tools:  ['Gruntfile.coffe', 'karma.conf.coffee']
+      app:    ['app/**/*.coffee']
+      spec:   ['spec/**/*.coffee']
 
 ################################################################################
 # Copy bower components to paths
@@ -98,13 +90,13 @@ module.exports = (grunt)->
       karma:
         options:
           force: true
-        src: 'reports/coverage/lcov.info',
+        src: 'reports/coverage/PhantomJS 1.9.7 (Linux)/lcov.info',
 
 ################################################################################
 
     karma:
       test:
-        configFile: 'karma.conf.js'
+        configFile: 'karma.conf.coffee'
 
 ################################################################################
 
@@ -142,7 +134,6 @@ module.exports = (grunt)->
 
   grunt.registerTask 'test', 'Run test suites', [
     # phpunit
-    'browserify:karma'
     'karma'
     'coveralls'
   ]

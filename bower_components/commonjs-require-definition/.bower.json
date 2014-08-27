@@ -1,0 +1,29 @@
+{
+  "name": "commonjs-require-definition",
+  "description": "Simple common.js `require()` definition.",
+  "version": "0.1.2",
+  "keywords": [
+    "commonjs",
+    "module",
+    "require",
+    "define"
+  ],
+  "main": "require.js",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "node.js"
+  ],
+  "homepage": "https://github.com/brunch/commonjs-require-definition",
+  "_release": "0.1.2",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.1.2",
+    "commit": "a7438fca80a56304457dcc151ebe77ee1c9620fb"
+  },
+  "_source": "git://github.com/brunch/commonjs-require-definition.git",
+  "_target": "~0.1.2",
+  "_originalSource": "commonjs-require-definition",
+  "_direct": true
+}
