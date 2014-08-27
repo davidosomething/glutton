@@ -32,10 +32,6 @@ module.exports = (grunt)->
 
     browserify:
       options:
-        browserifyOptions:
-          debug: true
-          extensions: [ '.coffee', '.js' ]
-
         # use this since we use bower instead of NPM for components
         # alphabetically
         alias: [
@@ -43,13 +39,12 @@ module.exports = (grunt)->
           './bower_components/jquery/dist/jquery.js:jquery'
           './bower_components/lodash/dist/lodash.underscore.js:underscore'
         ]
-
-        transform: [
-          'coffeeify'
-          # 'browserify-shim'
-          #'uglifyify'
-        ]
+        transform: [ 'coffeeify' ]
       dist:
+        options:
+          browserifyOptions:
+            debug: true
+            extensions: [ '.coffee', '.js' ]
         files:
           'static/app/app.js': [ 'app/**/*.coffee' ]
       watch:
