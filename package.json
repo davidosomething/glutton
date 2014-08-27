@@ -8,13 +8,10 @@
     "type": "git",
     "url": "https://github.com/davidosomething/glutton"
   },
-  "main": "Gruntfile.coffee",
+  "main": "app/app.coffee",
   "scripts": {
     "precommit": "./githooks/precommit.sh",
     "test": "grunt test"
-  },
-  "browser": {
-    "jquery": "./bower_components/jquery/dist/jquery.min.js"
   },
   "devDependencies": {
     "broccoli": "^0.12.3",

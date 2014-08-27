@@ -44,7 +44,8 @@ module.exports = (grunt)->
         options:
           browserifyOptions:
             debug: true
-            extensions: [ '.coffee', '.js' ]
+            extensions: [ '.coffee', '.js', '.json' ]
+            noparse: [ 'jquery' ]
         files:
           'static/app/app.js': [ 'app/**/*.coffee' ]
       watch:
