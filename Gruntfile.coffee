@@ -1,8 +1,9 @@
 module.exports = (grunt)->
 
-  _ = require('lodash')
-
 ################################################################################
+# Browserify shimming
+
+  _ = require('lodash')
 
   libs = require('./config/browserify-shim.coffee')
 
