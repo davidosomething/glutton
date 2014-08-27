@@ -1,12 +1,12 @@
 # dev tools
-node_modules/
+/node_modules/
 
 # managed
-vendor/
+/vendor/
 
 # compiled
-doc/
-reports/
-static/
-test/dist/
-tmp/
+/doc/
+/reports/
+/static/
+/test/dist/
+/tmp/
