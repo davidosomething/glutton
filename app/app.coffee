@@ -2,8 +2,8 @@
 # main app entry point
 
 Backbone = require('backbone')
-#$ = require('jquery')
-#Backbone.$ = $
+$ = require('jquery')
+Backbone.$ = $
 
 app = window.app ||= {}
 app.OK = true

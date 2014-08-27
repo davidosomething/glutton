@@ -13,8 +13,12 @@ module.exports = (config)->
       # this is to support commonJs by defining require()
       'bower_components/commonjs-require-definition/require.js'
       # add more here, like backbone, jquery, etc.
+
+      # shimmed
+      # add to test/shim.coffee
       'bower_components/lodash/dist/lodash.underscore.js'
       'bower_components/backbone/backbone.js'
+      'bower_components/jquery/dist/jquery.js'
       'test/shim.coffee'
 
       #
