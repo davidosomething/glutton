@@ -5,7 +5,7 @@
 /vendor/
 
 # compiled
-/doc/
+/docs/
 /reports/
 /static/
 /test/dist/

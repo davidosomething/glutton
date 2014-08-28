@@ -21,6 +21,7 @@ module.exports = ->
   ]
 
   @registerTask 'document', 'Run documentation generators', [
+    'codo'
   ]
 
   @registerTask 'release', [
