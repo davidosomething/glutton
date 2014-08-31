@@ -1,9 +1,11 @@
 module.exports = (config)->
+  browsers = [ 'PhantomJS' ]
+  if not process.env.TRAVIS
+    browsers.push 'Chrome', 'Firefox'
+
   config.set
     basePath: ''
-    browsers:  [ 'PhantomJS' ]
-    port:      9876
-
+    browsers: browsers
     frameworks: ['mocha', 'chai-sinon']
 
     files: [
@@ -55,8 +57,7 @@ module.exports = (config)->
         { type: 'text-summary' }
       ]
 
-    logLevel: config.LOG_INFO
     colors: true
+    logLevel: config.LOG_INFO
     autoWatch: true
     singleRun: true
-
