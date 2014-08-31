@@ -2,6 +2,8 @@ module.exports = ->
 
   @loadNpmTasks 'grunt-browserify'
 
+  ############################################################################
+
   #
   # Browserify shimming
   #

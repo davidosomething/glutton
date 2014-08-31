@@ -1,5 +1,7 @@
 module.exports = ->
 
+  @loadNpmTasks 'grunt-newer'
+
   @loadTasks 'config/grunt'
 
   @registerTask 'lint', 'Lint', [
