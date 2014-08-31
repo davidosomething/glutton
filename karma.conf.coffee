@@ -4,7 +4,7 @@ module.exports = (config)->
     browsers:  [ 'PhantomJS' ]
     port:      9876
 
-    frameworks: ['mocha', 'chai', 'sinon']
+    frameworks: ['mocha', 'chai-sinon']
 
     files: [
       #
