@@ -1,7 +1,8 @@
 # glutton
 
 [![Travis CI build status][travisBadge]][travisLink]
-[![David dependency status][davidBadge]][packageJson]
+[![David dependency status][davidBadge]][davidLink]
+[![Development Dependency Status][davidDevBadge]][davidDevLink]
 [![Coverage Status][coverallsBadge]][coverallsLink]
 
 > Backbone.js powered WordPress theme for DavidOSomething.com
@@ -43,7 +44,9 @@ Managed by package managers and tmp folders
 [codeshipLink]:   https://www.codeship.io/projects/32535
 [coverallsBadge]: https://coveralls.io/repos/davidosomething/glutton/badge.png
 [coverallsLink]:  https://coveralls.io/r/davidosomething/glutton
-[davidBadge]:     https://david-dm.org/davidosomething/glutton.png
-[packageJson]:    https://github.com/davidosomething/glutton/blob/master/package.json
+[davidBadge]:     https://david-dm.org/davidosomething/glutton.png?theme=shields.io
+[davidLink]:      https://david-dm.org/davidosomething/glutton#info=dependencies
+[davidDevBadge]:  https://david-dm.org/davidosomething/glutton/dev-status.png?theme=shields.io
+[davidDevLink]:   https://david-dm.org/davidosomething/glutton#info=devDependencies
 [travisLink]:     https://travis-ci.org/davidosomething/glutton
 [travisBadge]:    http://travis-ci.org/davidosomething/glutton.png
