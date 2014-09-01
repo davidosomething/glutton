@@ -22,7 +22,7 @@ before_install:
 
 install:
   - bundle install
-  - composer install
+  - composer install --prefer-source --no-interaction
   - npm install
 
 #  - sudo apt-get install apache2 libapache2-mod-fastcgi

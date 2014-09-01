@@ -38,8 +38,18 @@ Managed by package managers and tmp folders
 - `.sass-cache/` - sass cache
 
 ## Other badges and stuff
-[ ![Codeship Status for davidosomething/glutton][codeshipBadge]][codeshipLink]
+[![Codeship Status for davidosomething/glutton][codeshipBadge]][codeshipLink]
+[![Code Climate][codeClimateBadge]][codeClimateLink]
+[![Code Climate Coverage][codeClimateCoverageBadge]][codeClimateLink]
 
+CodeClimate test coverage analysis processed through Codeship.io builds
+
+----
+
+
+[codeClimateBadge]: https://codeclimate.com/github/davidosomething/glutton/badges/gpa.svg
+[codeClimateLink]:  https://codeclimate.com/github/davidosomething/glutton
+[codeClimateCoverageBadge]: https://codeclimate.com/github/davidosomething/glutton/badges/coverage.svg
 [codeshipBadge]:  https://www.codeship.io/projects/4c4f8010-0f00-0132-fc79-02c0648a600f/status?branch=master
 [codeshipLink]:   https://www.codeship.io/projects/32535
 [coverallsBadge]: https://coveralls.io/repos/davidosomething/glutton/badge.png
