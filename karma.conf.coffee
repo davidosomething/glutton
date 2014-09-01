@@ -4,7 +4,7 @@ module.exports = (config)->
   if not process.env.DRONE
     browsers.push 'Firefox'
 
-  if not process.env.TRAVIS
+  if not process.env.TRAVIS and not process.env.DRONE
     browsers.push 'Chrome'
 
   config.set

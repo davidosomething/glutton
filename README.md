@@ -4,6 +4,7 @@
 [![David dependency status][davidBadge]][davidLink]
 [![Development Dependency Status][davidDevBadge]][davidDevLink]
 [![Coverage Status][coverallsBadge]][coverallsLink]
+[![Code Climate][codeClimateBadge]][codeClimateLink]
 
 > Backbone.js powered WordPress theme for DavidOSomething.com
 
@@ -38,9 +39,9 @@ Managed by package managers and tmp folders
 - `.sass-cache/` - sass cache
 
 ## Other badges and stuff
-[![Codeship Status for davidosomething/glutton][codeshipBadge]][codeshipLink]
-[![Code Climate][codeClimateBadge]][codeClimateLink]
-[![Code Climate Coverage][codeClimateCoverageBadge]][codeClimateLink]
+Codeship: [![Codeship Status for davidosomething/glutton][codeshipBadge]][codeshipLink]<br>
+Code Climate Coverage: [![Code Climate Coverage][codeClimateCoverageBadge]][codeClimateLink]<br>
+drone.io [![Build Status][droneIoBadge]][droneIoLink]<br>
 
 ----
 
@@ -56,5 +57,7 @@ Managed by package managers and tmp folders
 [davidLink]:      https://david-dm.org/davidosomething/glutton#info=dependencies
 [davidDevBadge]:  https://david-dm.org/davidosomething/glutton/dev-status.png?theme=shields.io
 [davidDevLink]:   https://david-dm.org/davidosomething/glutton#info=devDependencies
+[droneIoBadge]:   https://drone.io/github.com/davidosomething/glutton/status.png
+[droneIoLink]:    https://drone.io/github.com/davidosomething/glutton/latest
 [travisLink]:     https://travis-ci.org/davidosomething/glutton
 [travisBadge]:    http://travis-ci.org/davidosomething/glutton.png
