@@ -1,6 +1,10 @@
 module.exports = (config)->
-  browsers = [ 'Firefox', 'PhantomJS' ]
-  if not process.env.TRAVIS
+  browsers = [ 'PhantomJS' ]
+
+  # the fork of karma-coverage doesn't write lcov when these browsers are
+  # added
+  if not process.env.TRAVIS and not process.env.CI
+    browsers.push 'Firefox'
     browsers.push 'Chrome'
 
   config.set
@@ -51,7 +55,6 @@ module.exports = (config)->
 
     coverageReporter:
       dir:    'reports/coverage/'
-      #subdir doesn't work
       reporters: [
         { type: 'lcov' }
         { type: 'text-summary' }

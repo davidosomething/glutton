@@ -26,7 +26,7 @@ before_script:
 script:
   - grunt release
   - grunt coveralls
-  #- cat reports/coverage/PhantomJS\ 1.9.7\ \(Linux\)/lcov.info | codeclimate
+  - cat reports/coverage/PhantomJS\ 1.9.7\ \(Linux\)/lcov.info | codeclimate
 
 addons:
   code_climate:
