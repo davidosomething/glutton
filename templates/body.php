@@ -4,4 +4,4 @@
 
 <div class="pane pane--main">
 	<?php echo $this->mustache( 'articlelisting/default.mustache', $data ); ?>
-<div>
+</div>
