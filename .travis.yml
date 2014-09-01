@@ -3,19 +3,12 @@ notifications:
 
 branches:
   only:
-    - master
+  - master
 
 language: php
-
 php:
   - 5.4
   - 5.5
-
-# @TODO set up complete WP instance
-# mysql:
-#   database: glutton
-#   username: glutton
-#   encoding: utf8
 
 before_install:
   - npm install -g grunt-cli
@@ -25,18 +18,11 @@ install:
   - composer install --prefer-source --no-interaction
   - npm install
 
-#  - sudo apt-get install apache2 libapache2-mod-fastcgi
-# # enable php-fpm
-# - sudo cp ~/.phpenv/versions/$(phpenv version-name)/etc/php-fpm.conf.default ~/.phpenv/versions/$(phpenv version-name)/etc/php-fpm.conf
-# - sudo a2enmod rewrite actions fastcgi alias
-# - echo "cgi.fix_pathinfo = 1" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
-# - ~/.phpenv/versions/$(phpenv version-name)/sbin/php-fpm
-# # configure apache virtual hosts
-# - sudo cp -f .travis/travis-ci-apache /etc/apache2/sites-available/default
-# - sudo sed -e "s?%TRAVIS_BUILD_DIR%?$(pwd)?g" --in-place /etc/apache2/sites-available/default
-# - sudo service apache2 restart
-
 script:
   - grunt release
   - grunt coveralls
+  - codeclimate < reports/coverage/PhantomJS\ 1.9.7\ \(Linux\)/lcov.info
 
+env:
+  global:
+    secure: Q5OYy2ftzVvdg5LqJjPiHqze2DXwI6N8DCj0+xiRLSWypqNjIeFmKidnG948W4flXYxP+au/jsMJYPsXtiz2z5JLQL/3aOpP7ab4q1CFeD6sVqssSlU1Xkm4czFNx1OS16bn2ptKORZOD9BtBdMh2vYUaEh4flOKNA4I36Qw/Yc=
