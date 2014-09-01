@@ -26,8 +26,8 @@ before_script:
 script:
   - grunt release
   - grunt coveralls
-  - codeclimate < reports/coverage/PhantomJS\ 1.9.7\ \(Linux\)/lcov.info
+  - cat reports/coverage/PhantomJS\ 1.9.7\ \(Linux\)/lcov.info | codeclimate
 
-env:
-  global:
-    secure: Q5OYy2ftzVvdg5LqJjPiHqze2DXwI6N8DCj0+xiRLSWypqNjIeFmKidnG948W4flXYxP+au/jsMJYPsXtiz2z5JLQL/3aOpP7ab4q1CFeD6sVqssSlU1Xkm4czFNx1OS16bn2ptKORZOD9BtBdMh2vYUaEh4flOKNA4I36Qw/Yc=
+addons:
+  code_climate:
+    repo_token: c33f1e5138af3deced852e0b29608c21e92269147d6262d2fc766b44e8e223a8
