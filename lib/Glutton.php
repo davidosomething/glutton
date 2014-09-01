@@ -18,5 +18,26 @@ class Glutton
 	static public function theme( $filepath ) {
 		return get_stylesheet_directory() . $filepath;
 	}
+
+	/**
+	 * scripts
+	 *
+	 * Hook this function to add scripts
+	 */
+	static public function scripts() {
+		wp_enqueue_script('glutton-lib',
+			get_stylesheet_directory_uri() . '/static/app/lib.js',
+			array(),
+			null,
+			true
+		);
+		wp_enqueue_script('glutton-main',
+			get_stylesheet_directory_uri() . '/static/app/app.js',
+			array( 'glutton-lib' ),
+			null,
+			true
+		);
+	}
+
 }
 

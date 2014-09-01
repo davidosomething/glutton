@@ -10,3 +10,4 @@
 <link rel="stylesheet" href="<?php Glutton::css( 'main.css', true ); ?>">
 <?php wp_head(); ?>
 </head>
+<body <?php body_class(); ?>>
