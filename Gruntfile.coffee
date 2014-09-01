@@ -1,6 +1,6 @@
 module.exports = ->
 
-  @loadNpmTasks 'grunt-newer'
+  require('time-grunt')(this)
 
   @loadTasks 'config/grunt'
 
@@ -10,12 +10,22 @@ module.exports = ->
     'scsslint:all'
   ]
 
-  @registerTask 'build', 'Build theme for release', [
-    'shell:prebuild'
-    'newer:copy:dist'
-    'broccoli:sass:build'
+  @registerTask 'css', 'Build css', [
+    'copy:dist'
+    'compass'
+    'autoprefixer'
+    'csswring'
+  ]
+
+  @registerTask 'js', 'Build theme', [
     'browserify:lib'
     'browserify:app'
+  ]
+
+  @registerTask 'build', 'Build theme', [
+    'shell:prebuild'
+    'css'
+    'js'
   ]
 
   @registerTask 'test', 'Run test suites', [
@@ -29,6 +39,7 @@ module.exports = ->
 
   @registerTask 'release', [
     'lint'
+    'clean'
     'build'
     'test'
     'document'
@@ -36,6 +47,5 @@ module.exports = ->
 
   @registerTask 'default', [
     'build'
-    'broccoli:dist:watch'
     'browserify:watch'
   ]
