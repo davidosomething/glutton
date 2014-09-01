@@ -1,13 +1,13 @@
 # Default application configuration that all configurations inherit from.
 linters:
   BorderZero:
-    enabled: true
+    enabled: false
 
   CapitalizationInSelector:
-    enabled: false
+    enabled: true
 
   ColorKeyword:
-    enabled: false
+    enabled: true
 
   Comment:
     enabled: true
@@ -19,7 +19,7 @@ linters:
     enabled: true
 
   DuplicateProperty:
-    enabled: false
+    enabled: true
 
   EmptyLineBetweenBlocks:
     enabled: true
@@ -33,18 +33,18 @@ linters:
     present: true
 
   HexLength:
-    enabled: false
+    enabled: true
     style: short # or 'long'
 
   HexNotation:
-    enabled: true
+    enabled: false
     style: lowercase # or 'uppercase'
 
   HexValidation:
     enabled: true
 
   IdWithExtraneousSelector:
-    enabled: false
+    enabled: true
 
   Indentation:
     enabled: true
@@ -59,8 +59,8 @@ linters:
     force_nesting: true
 
   NameFormat:
-    enabled: false
-    convention: hyphenated_lowercase # or 'BEM', or a regex pattern
+    enabled: true
+    convention: BEM # or 'BEM', or a regex pattern
 
   PlaceholderInExtend:
     enabled: false
@@ -74,13 +74,13 @@ linters:
 
   SelectorDepth:
     enabled: true
-    max_depth: 7
+    max_depth: 4
 
   Shorthand:
-    enabled: false
+    enabled: true
 
   SingleLinePerSelector:
-    enabled: false
+    enabled: true
 
   SpaceAfterComma:
     enabled: false

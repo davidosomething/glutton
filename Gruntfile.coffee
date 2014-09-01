@@ -6,7 +6,7 @@ module.exports = ->
 
   @registerTask 'lint', 'Lint', [
     'coffeelint'
-    'scsslint'
+    'scsslint:all'
   ]
 
   @registerTask 'build', 'Build theme for release', [

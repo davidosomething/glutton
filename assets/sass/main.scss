@@ -1,7 +1,6 @@
-//@import '../json/breakpoints.json'
+@import '../json/breakpoints.json';
+@import '../json/colors.json';
+
 @import 'vendor/_normalize.scss';
 @import 'vendor/_h5bp-utility.scss';
 
-body {
-  background: white;
-}
