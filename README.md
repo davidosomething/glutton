@@ -42,8 +42,6 @@ Managed by package managers and tmp folders
 [![Code Climate][codeClimateBadge]][codeClimateLink]
 [![Code Climate Coverage][codeClimateCoverageBadge]][codeClimateLink]
 
-CodeClimate test coverage analysis processed through Codeship.io builds
-
 ----
 
 
