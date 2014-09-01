@@ -13,7 +13,6 @@ module.exports = ->
   @registerTask 'build', 'Build theme for release', [
     'shell:prebuild'
     'newer:copy:dist'
-    'broccoli:json:build'
     'broccoli:sass:build'
     'browserify:lib'
     'browserify:app'
