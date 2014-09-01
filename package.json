@@ -42,7 +42,7 @@
     "karma-chrome-launcher": "^0.1.4",
     "karma-coffee-preprocessor": "^0.2.1",
     "karma-commonjs-preprocessor": "^0.1.1",
-    "karma-coverage": "git+https://github.com/kylewelsby/karma-coverage#fix-coffee-script-compiler",
+    "karma-coverage": "git+https://github.com/davidosomething/karma-coverage#latest-kc-with-hbo",
     "karma-firefox-launcher": "^0.1.3",
     "karma-mocha": "^0.1.9",
     "karma-phantomjs-launcher": "^0.1.4",

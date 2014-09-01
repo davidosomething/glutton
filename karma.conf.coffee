@@ -1,10 +1,7 @@
 module.exports = (config)->
-  browsers = [ 'PhantomJS' ]
+  browsers = [ 'Firefox', 'PhantomJS' ]
 
-  # the fork of karma-coverage doesn't write lcov when these browsers are
-  # added
-  if not process.env.TRAVIS and not process.env.CI
-    browsers.push 'Firefox'
+  if not process.env.TRAVIS
     browsers.push 'Chrome'
 
   config.set
