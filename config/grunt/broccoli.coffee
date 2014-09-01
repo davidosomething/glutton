@@ -7,7 +7,7 @@ module.exports = ->
   # Note this task cleans the dest dir before run
 
   @config 'broccoli',
-    dist:
-      config: 'Brocfile.js'
-      dest: 'static'
+    sass:
+      config: 'config/broccoli/sass.js'
+      dest: 'static/assets'
 

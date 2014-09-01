@@ -6,13 +6,15 @@ module.exports = ->
 
   @registerTask 'lint', 'Lint', [
     'coffeelint'
+    'jsonlint'
     'scsslint:all'
   ]
 
   @registerTask 'build', 'Build theme for release', [
     'shell:prebuild'
     'newer:copy:dist'
-    'broccoli:dist:build'
+    'broccoli:json:build'
+    'broccoli:sass:build'
     'browserify:lib'
     'browserify:app'
   ]

@@ -1,10 +1,8 @@
-{ // comments are stripped in the broccoli build process
-
+{
   "primary": {
     "text": "#222",
     "link": "#ace",
     "hover": "#def",
-    "background": "#fff",
+    "background": "#fff"
   }
-
 }
