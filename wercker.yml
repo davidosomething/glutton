@@ -1,0 +1,14 @@
+box: wercker/php
+build:
+    steps:
+      - script:
+          name: install dependencies
+          code: |
+            composer install --no-interaction
+            bundle install
+            npm install -g grunt-cli
+            npm install
+      - script:
+          name: Build project
+          code: |
+            grunt release
