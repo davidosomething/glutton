@@ -19,7 +19,7 @@ function glutton_bugsnag() {
 	</script>
 SNIPPET;
 }
-add_action( 'wp_print_head_scripts', 'glutton_bugsnag' );
+add_action( 'wp_print_scripts', 'glutton_bugsnag' );
 
 /**
  * glutton_rollbar
@@ -40,7 +40,7 @@ function glutton_rollbar() {
 	</script>
 SNIPPET;
 }
-add_action( 'wp_print_head_scripts', 'glutton_rollbar' );
+add_action( 'wp_print_scripts', 'glutton_rollbar' );
 
 /**
  * glutton_jsmonitor
