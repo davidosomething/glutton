@@ -18,9 +18,14 @@ install:
   - composer install --prefer-source --no-interaction
   - npm install
 
+before_script:
+  - export DISPLAY=:99.0
+  - sh -e /etc/init.d/xvfb start
+
 script:
   - grunt release
   - grunt coveralls
+  - npm install -g codeclimate-test-reporter
   - codeclimate < reports/coverage/PhantomJS\ 1.9.7\ \(Linux\)/lcov.info
 
 env:
