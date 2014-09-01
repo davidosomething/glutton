@@ -1,5 +1,8 @@
 module.exports = (config)->
-  browsers = [ 'Firefox', 'PhantomJS' ]
+  browsers = [ 'PhantomJS' ]
+
+  if not process.env.DRONE
+    browsers.push 'Firefox'
 
   if not process.env.TRAVIS
     browsers.push 'Chrome'
