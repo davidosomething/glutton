@@ -3,9 +3,6 @@
  * header.php
  */
 
-class HeaderView implements GluttonView
-{
-	public function render() {
-		Glutton::template( 'head.php', array() );
-	}
-}
+require 'views/Header.php';
+$header = new HeaderView();
+$header->render();

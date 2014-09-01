@@ -3,9 +3,6 @@
  * footer.php
  */
 
-class FooterView implements GluttonView
-{
-	public function render() {
-		Glutton::template( 'footer.php', array() );
-	}
-}
+require 'views/Footer.php';
+$footer = new FooterView();
+$footer->render();
