@@ -21,6 +21,7 @@
     "coffeeify": "^0.7.0",
     "coffeelint": "^1.5.2",
     "coffeelint-stylish": "^0.1.0",
+    "dalekjs": "0.0.8",
     "grunt": "^0.4.5",
     "grunt-autoprefixer": "^1.0.1",
     "grunt-browserify": "^3.0.0",
