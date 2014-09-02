@@ -9,5 +9,5 @@ module.exports = ->
       configFile: 'coffeelint.json'
     tools:  ['Gruntfile.coffee', 'karma.conf.coffee']
     app:    ['app/**/*.coffee']
-    spec:   ['spec/**/*.coffee']
+    tests:  ['test/**/*.coffee']
 

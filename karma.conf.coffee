@@ -35,7 +35,7 @@ module.exports = (config)->
       #
       # specs to test against
       #
-      'spec/**/*.coffee'
+      'test/app/**/*.coffee'
     ]
 
     preprocessors:
@@ -45,7 +45,7 @@ module.exports = (config)->
 
       # the coverage preprocessor runs Ibrik to compile coffee
       'app/**/*.coffee': ['commonjs', 'coverage']
-      'spec/**/*.coffee': ['coffee']
+      'test/**/*.coffee': ['coffee']
 
     commonjsPreprocessor:
       options:

@@ -17,15 +17,17 @@ Edit files in these paths
 - `.travis/` - travis VM config
 - `assets/` - test fixtures, shims, etc
 - `app/` - app coffee
-- `spec/` - test specs
 - `templates/` - Mustache templates
 - `test/` - test fixtures, shims, etc
+  - `app/` - tests for the backbone-coffee app
+  - `e2e/` - end-to-end tests using selenium/webdriver
+  - `php/` - phpunit tests
 
 ### Generated
 
 Task runner will generate files into these paths
 
-- `doc/` - app documentation
+- `docs/` - app documentation
 - `reports/` - app reports, code coverage
 - `static/` - compiled/optimized assets
 
