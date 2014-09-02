@@ -44,6 +44,13 @@ module.exports = ->
     'dalek:default'
   ]
 
+  @registerTask 'report', 'Run reporters against a successful build', [
+    'stylestats'
+    #'pagespeed' not configured
+    #'yslow' not configured
+    #'wpt' not configured
+  ]
+
   @registerTask 'document', 'Run documentation generators', [
     'codo'
   ]
