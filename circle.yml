@@ -19,7 +19,7 @@ dependencies:
     - npm install -g dalek-cli
     - npm install -g grunt-cli
   override:
-    - bundle install
+    - bundle check || bundle install
     - composer install --prefer-source --no-interaction
     - npm install
 
