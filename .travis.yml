@@ -11,6 +11,7 @@ php:
   - 5.5
 
 before_install:
+  - npm install -g dalek-cli
   - npm install -g grunt-cli
 
 install:
@@ -21,11 +22,14 @@ install:
 before_script:
   - export DISPLAY=:99.0
   - sh -e /etc/init.d/xvfb start
-  - npm install -g codeclimate-test-reporter
 
 script:
   - grunt release
+  - grunt test
+
+after_script:
   - grunt coveralls
+  - npm install -g codeclimate-test-reporter
   - cat reports/coverage/PhantomJS\ 1.9.7\ \(Linux\)/lcov.info | codeclimate
 
 addons:

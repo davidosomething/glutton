@@ -28,21 +28,24 @@ module.exports = ->
     'js'
   ]
 
-  @registerTask 'test', 'Run test suites', [
-    # phpunit
-    'karma'
-  ]
-
-  @registerTask 'document', 'Run documentation generators', [
-    'codo'
-  ]
-
   @registerTask 'release', [
     'lint'
     'clean'
     'build'
-    'test'
-    'document'
+  ]
+
+  @registerTask 'test', 'Run test suites', [
+    # phpunit
+    'karma'
+
+    # @TODO dalek needs to run against local port, switch to dynamic
+    # Dalekfile.js
+    # @TODO dynamic browser selection based on ENV
+    'dalek:default'
+  ]
+
+  @registerTask 'document', 'Run documentation generators', [
+    'codo'
   ]
 
   @registerTask 'default', [

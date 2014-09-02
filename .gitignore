@@ -4,9 +4,13 @@
 # managed
 /vendor/
 
-# compiled
+# compilation
+/static/
+
+# artifacts
 /docs/
 /reports/
-/static/
-/test/dist/
+
+# temp
+/temp/
 /tmp/
