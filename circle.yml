@@ -1,0 +1,33 @@
+general:
+  branches:
+    only:
+      - master
+  artifacts:
+    - "docs/"
+    - "reports/"
+
+machine:
+  node:
+    version: v0.10.28
+  php:
+    version: 5.5.11
+  ruby:
+    version: 2.1.2
+
+dependencies:
+  pre:
+    - npm install -g dalek-cli
+    - npm install -g grunt-cli
+  override:
+    - bundle install
+    - composer install --prefer-source --no-interaction
+    - npm install
+
+test:
+  override:
+    - grunt release
+    - grunt test
+  post:
+    - grunt report
+    - cp reports/coverage/PhantomJS\ 1.9.7\ \(Linux\)/lcov.info $CIRCLE_ARTIFACTS
+
