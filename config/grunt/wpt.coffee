@@ -10,7 +10,7 @@ module.exports = ->
       locations: [ 'SanJose_IE9' ]
       key: process.env.WPT_API_KEY
 
-    default: {
+    default:
       options:
         url: [
           'http://www.google.com'
