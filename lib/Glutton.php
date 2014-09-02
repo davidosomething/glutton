@@ -1,6 +1,17 @@
 <?php
 class Glutton
 {
+	static private $_version;
+	static public function version() {
+		if ( ! static::$_version ) {
+			$composer_json_file = trailingslashit( get_stylesheet_directory_uri() ) . 'composer.json';
+			$composer_json_data = file_get_contents( $composer_json_file );
+			$composer_data = json_decode( $composer_json_data );
+			static::$_version = $composer_data->version;
+		}
+		return static::$_version;
+	}
+
 	static public function asset() {
 		return trailingslashit( get_stylesheet_directory_uri() ) . 'static/assets/';
 	}

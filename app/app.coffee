@@ -9,3 +9,5 @@ app = window.app ||= {}
 app.OK = true
 
 console.log('app loaded')
+
+Bugsnag.releaseStage = 'development'
