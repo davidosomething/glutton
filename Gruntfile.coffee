@@ -37,11 +37,6 @@ module.exports = ->
   @registerTask 'test', 'Run test suites', [
     # phpunit
     'karma'
-
-    # @TODO dalek needs to run against local port, switch to dynamic
-    # Dalekfile.js
-    # @TODO dynamic browser selection based on ENV
-    'dalek:default'
   ]
 
   @registerTask 'report', 'Run reporters against a successful build', [

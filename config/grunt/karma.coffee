@@ -7,4 +7,3 @@ module.exports = ->
   @config 'karma',
     test:
       configFile: 'karma.conf.coffee'
-
