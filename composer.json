@@ -11,6 +11,6 @@
     }
   ],
   "require": {
-    "mustache/mustache": "~2.6.0"
+    "mustache/mustache": "~2.7.0"
   }
 }
