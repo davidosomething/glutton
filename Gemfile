@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
-gem 'compass', '~> 1.0.1'
-gem 'sassy-maps', '~> 0.3.2'
+gem 'sass', '~> 3.4.3'
+gem 'sassy-maps', '~> 0.4.0'
 gem 'sass-json-vars', '~> 0.3.2'
-gem 'scss-lint', '~> 0.27.0'
+gem 'scss-lint', '~> 0.28.0'
+gem 'compass', '~> 1.0.1'
