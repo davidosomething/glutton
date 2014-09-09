@@ -10,4 +10,5 @@ module.exports = ->
     dist:
       files:
         'assets/sass/vendor/_normalize.scss': 'bower_components/normalize.css/normalize.css'
+        'assets/sass/vendor/_normalize-opentype.scss': 'bower_components/normalize-opentype.css/normalize-opentype.css'
 
