@@ -3,6 +3,7 @@
 [![Travis CI build status][travisBadge]][travisLink]
 [![David dependency status][davidBadge]][davidLink]
 [![Development Dependency Status][davidDevBadge]][davidDevLink]
+[![Gemnasium dependency status][gemnasiumBadge]][gemnasiumLink]
 [![Coverage Status][coverallsBadge]][coverallsLink]
 [![Code Climate][codeClimateBadge]][codeClimateLink]
 
@@ -62,6 +63,8 @@ Semaphore [![Build Status][semaphoreBadge]][semaphoreLink]<br>
 [davidDevLink]:   https://david-dm.org/davidosomething/glutton#info=devDependencies
 [droneIoBadge]:   https://drone.io/github.com/davidosomething/glutton/status.png
 [droneIoLink]:    https://drone.io/github.com/davidosomething/glutton/latest
+[gemnasiumBadge]: http://img.shields.io/gemnasium/davidosomething/glutton.svg
+[gemnasiumLink]:  https://gemnasium.com/davidosomething/glutton
 [semaphoreBadge]: https://semaphoreapp.com/api/v1/projects/b987bb51-e328-4052-a870-f83c3b7acd4d/242696/shields_badge.png
 [semaphoreLink]:  https://semaphoreapp.com/davidosomething/glutton
 [travisLink]:     https://travis-ci.org/davidosomething/glutton
