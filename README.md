@@ -1,13 +1,15 @@
 # glutton
 
-[![Travis CI build status][travisBadge]][travisLink]
-[![David dependency status][davidBadge]][davidLink]
-[![Development Dependency Status][davidDevBadge]][davidDevLink]
-[![Gemnasium dependency status][gemnasiumBadge]][gemnasiumLink]
-[![Coverage Status][coverallsBadge]][coverallsLink]
-[![Code Climate][codeClimateBadge]][codeClimateLink]
-
 > Backbone.js powered WordPress theme for DavidOSomething.com
+
+## Status
+
+| Service  | Status
+| -------: | :--------
+| Build    | [![Travis CI build status][travisBadge]][travisLink]
+| Test     | [![Coverage Status][coverallsBadge]][coverallsLink] [![Code Climate][codeClimateBadge]][codeClimateLink]
+| NPM      | [![David dependency status][davidBadge]][davidLink] [![Development Dependency Status][davidDevBadge]][davidDevLink]
+| Gems     | [![Gemnasium dependency status][gemnasiumBadge]][gemnasiumLink]
 
 ## Paths
 
@@ -42,10 +44,13 @@ Managed by package managers and tmp folders
 - `.sass-cache/` - sass cache
 
 ## Other badges and stuff
-Codeship: [![Codeship Status for davidosomething/glutton][codeshipBadge]][codeshipLink]<br>
-Code Climate Coverage: [![Code Climate Coverage][codeClimateCoverageBadge]][codeClimateLink]<br>
-drone.io [![Build Status][droneIoBadge]][droneIoLink]<br>
-Semaphore [![Build Status][semaphoreBadge]][semaphoreLink]<br>
+
+| Service      | Status
+| -----------: | :--------
+| Codeship     | [![Codeship Status for davidosomething/glutton][codeshipBadge]][codeshipLink]<br>
+| Code Climate | [![Code Climate Coverage][codeClimateCoverageBadge]][codeClimateLink]<br>
+| drone.io     | [![Build Status][droneIoBadge]][droneIoLink]<br>
+| Semaphore    | [![Build Status][semaphoreBadge]][semaphoreLink]<br>
 
 ----
 
