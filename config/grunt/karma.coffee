@@ -5,5 +5,8 @@ module.exports = ->
   ############################################################################
 
   @config 'karma',
-    test:
+    all:
       configFile: 'karma.conf.coffee'
+    quick:
+      configFile: 'karma.conf.coffee'
+      browsers: ['PhantomJS']

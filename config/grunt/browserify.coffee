@@ -39,6 +39,7 @@ module.exports = ->
         # alphabetically
         alias: getBrowserifyAliases(libs)
         browserifyOptions:
+          bundleExternal: false
           debug: false
           extensions: [ '.coffee', '.js', '.json' ]
           noparse: [ 'jquery' ]
@@ -56,6 +57,7 @@ module.exports = ->
         'static/app/app.js': [ 'app/**/*.coffee' ]
     watch:
       options:
+        browserifyOptions: '<%= browserify.app.options.browserifyOptions %>'
         watch: true
       files: '<%= browserify.app.files %>'
 

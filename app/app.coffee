@@ -5,10 +5,17 @@ Backbone = require('backbone')
 $ = require('jquery')
 Backbone.$ = $
 
+DefaultRouter = require('./r/default')
+
 app = window.app ||= {}
 app.OK = true
+app.root = '/'
 
-console.log('app loaded')
+app.router = new DefaultRouter()
+Backbone.history.start({
+  pushState: true
+  root: app.root
+})
 
 # @TODO
 # Bugsnag.releaseStage = 'development'
