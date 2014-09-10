@@ -44,6 +44,7 @@ Managed by package managers and tmp folders
 Codeship: [![Codeship Status for davidosomething/glutton][codeshipBadge]][codeshipLink]<br>
 Code Climate Coverage: [![Code Climate Coverage][codeClimateCoverageBadge]][codeClimateLink]<br>
 drone.io [![Build Status][droneIoBadge]][droneIoLink]<br>
+Semaphore [![Build Status][semaphoreBadge]][semaphoreLink]<br>
 
 ----
 
@@ -61,5 +62,7 @@ drone.io [![Build Status][droneIoBadge]][droneIoLink]<br>
 [davidDevLink]:   https://david-dm.org/davidosomething/glutton#info=devDependencies
 [droneIoBadge]:   https://drone.io/github.com/davidosomething/glutton/status.png
 [droneIoLink]:    https://drone.io/github.com/davidosomething/glutton/latest
+[semaphoreBadge]: https://semaphoreapp.com/api/v1/projects/b987bb51-e328-4052-a870-f83c3b7acd4d/242696/shields_badge.png
+[semaphoreLink]:  https://semaphoreapp.com/davidosomething/glutton
 [travisLink]:     https://travis-ci.org/davidosomething/glutton
 [travisBadge]:    http://travis-ci.org/davidosomething/glutton.png
