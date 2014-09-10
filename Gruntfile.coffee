@@ -52,6 +52,7 @@ module.exports = ->
 
   @registerTask 'document', 'Run documentation generators', [
     'codo'
+    'sassdoc'
   ]
 
   @registerTask 'default', [
