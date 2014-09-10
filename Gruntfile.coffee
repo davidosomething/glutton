@@ -39,6 +39,10 @@ module.exports = ->
     'karma'
   ]
 
+  @registerTask 'e2e', 'Run end-to-end test suites', [
+    'mochaWebdriver'
+  ]
+
   @registerTask 'report', 'Run reporters against a successful build', [
     'stylestats'
     #'pagespeed' not configured

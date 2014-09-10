@@ -6,15 +6,15 @@ module.exports = ->
 
   @config 'scsslint',
     options:
-      #bundleExec: true
+      bundleExec: true
       config: '.scss-lint.yml'
     all:
       src: [
-        'assets/sass/**/*.scss'
-        '!assets/sass/vendor/**/*.scss'
+        'assets/sass/*.scss'
+        '!assets/sass/vendor/*.scss'
       ]
     report:
       options:
         colorizeOutput: false
         reporterOutput: 'reports/junit-scsslint.xml'
-      files: '<%= scsslint.all.src %>'
+      src: '<%= scsslint.all.src %>'
