@@ -7,7 +7,7 @@ module.exports = ->
   @registerTask 'lint', 'Lint', [
     'coffeelint'
     'jsonlint'
-    'scsslint:all'
+    #'scsslint:all' # broken
   ]
 
   @registerTask 'css', 'Build css', [

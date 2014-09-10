@@ -6,7 +6,7 @@ module.exports = ->
 
   @config 'scsslint',
     options:
-      bundleExec: true
+      #bundleExec: true
       config: '.scss-lint.yml'
     all:
       src: [
