@@ -16,7 +16,6 @@ machine:
 
 dependencies:
   pre:
-    - npm install -g dalek-cli
     - npm install -g grunt-cli
   override:
     - bundle check || bundle install

@@ -8,7 +8,6 @@ module.exports = ->
         'bower.json'
         'coffeelint.json'
         'composer.json'
-        'Dalekfile.json'
         'package.json'
       ]
 
