@@ -3,4 +3,5 @@ module.exports = ->
   @loadNpmTasks 'grunt-contrib-clean'
 
   @config 'clean',
-    static: [ 'static/' ]
+    static: [ 'static/*' ]
+    reports: [ 'reports/*' ]

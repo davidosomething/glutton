@@ -8,16 +8,14 @@ module.exports = ->
   # Browserify shimming
   #
   _ = require('lodash')
-  libs = require('../browserify-shim.coffee')
+
+  pkg = @file.readJSON "package.json"
 
   getBrowserifyAlias = (name)->
-    return libs[name].path + ':' + name
+    return pkg.browser[name] + ':' + name
 
-  getBrowserifyLibs = (libs)->
-    return _.keys(libs)
-
-  getBrowserifyAliases = (libs)->
-    aliases = _.reduce(libs, (aliasesArray, path, name)->
+  getBrowserifyAliases = ->
+    aliases = _.reduce(pkg.browser, (aliasesArray, path, name)->
       aliasesArray.push getBrowserifyAlias(name)
       return aliasesArray
     , [])
@@ -37,8 +35,9 @@ module.exports = ->
       options:
         # use this since we use bower instead of NPM for components
         # alphabetically
-        alias: getBrowserifyAliases(libs)
+        alias: getBrowserifyAliases()
         browserifyOptions:
+          bundleExternal: false
           debug: false
           extensions: [ '.coffee', '.js', '.json' ]
           noparse: [ 'jquery' ]
@@ -51,11 +50,12 @@ module.exports = ->
           debug: true
           extensions: [ '.coffee', '.js', '.json' ]
         # use things in lib
-        external: getBrowserifyLibs(libs)
+        external: _.keys(pkg.browser)
       files:
         'static/app/app.js': [ 'app/**/*.coffee' ]
     watch:
       options:
+        browserifyOptions: '<%= browserify.app.options.browserifyOptions %>'
         watch: true
       files: '<%= browserify.app.files %>'
 

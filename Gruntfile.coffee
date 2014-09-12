@@ -36,7 +36,7 @@ module.exports = ->
 
   @registerTask 'test', 'Run test suites', [
     # phpunit
-    'karma'
+    'karma:all'
   ]
 
   @registerTask 'e2e', 'Run end-to-end test suites', [
@@ -58,4 +58,5 @@ module.exports = ->
   @registerTask 'default', [
     'build'
     'browserify:watch'
+    'karma:watch'
   ]
