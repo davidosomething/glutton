@@ -73,4 +73,5 @@ Managed by package managers and tmp folders
 [semaphoreBadge]: https://semaphoreapp.com/api/v1/projects/b987bb51-e328-4052-a870-f83c3b7acd4d/242696/shields_badge.png
 [semaphoreLink]:  https://semaphoreapp.com/davidosomething/glutton
 [travisLink]:     https://travis-ci.org/davidosomething/glutton
-[travisBadge]:    http://travis-ci.org/davidosomething/glutton.png
+[travisBadge]:    https://travis-ci.org/davidosomething/glutton.svg?branch=master
+
