@@ -13,8 +13,19 @@
     "precommit": "./githooks/precommit.sh",
     "test": "grunt test"
   },
+  "browser": {
+    "underscore": "./bower_components/lodash/dist/lodash.underscore.js",
+    "backbone": "./bower_components/backbone/backbone.js",
+    "jquery": "./bower_components/jquery/dist/jquery.js"
+  },
+  "browserify-shim": {
+    "underscore": "_",
+    "backbone": "Backbone",
+    "jquery": "$"
+  },
   "devDependencies": {
     "browserify": "^5.10.1",
+    "browserify-shim": "^3.7.0",
     "chai": "^1.9.1",
     "codo": "^2.0.9",
     "coffee-script": "^1.8.0",
@@ -45,12 +56,11 @@
     "grunt-wpt": "^2.0.5",
     "grunt-yslow": "0.0.4",
     "ibrik": "git+https://github.com/davidosomething/ibrik#updatepkg",
+    "istanbulify": "^0.1.0",
     "karma": "^0.12.23",
+    "karma-bro": "^0.7.0",
     "karma-chai-sinon": "^0.1.3",
     "karma-chrome-launcher": "^0.1.4",
-    "karma-coffee-preprocessor": "^0.2.1",
-    "karma-commonjs-preprocessor": "^0.1.1",
-    "karma-coverage": "git+https://github.com/davidosomething/karma-coverage#peerdep",
     "karma-firefox-launcher": "^0.1.3",
     "karma-mocha": "^0.1.9",
     "karma-phantomjs-launcher": "^0.1.4",

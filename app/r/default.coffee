@@ -1,7 +1,6 @@
+$ = require('jquery')(window)
+_ = require('underscore')
 Backbone = require('backbone')
-console.log(Backbone)
-console.log(jQuery)
-console.log(_)
 
 module.exports = class DefaultRouter extends Backbone.Router
 
@@ -11,7 +10,6 @@ module.exports = class DefaultRouter extends Backbone.Router
   }
 
   index: ->
-    console.log('index')
     return
 
   jsonplaceholder: (resource)->

@@ -1,17 +1,9 @@
-notifications:
-  email: false
-
-branches:
-  only:
-  - master
-
 language: php
 php:
   - 5.4
   - 5.5
 
 before_install:
-  - npm install -g dalek-cli
   - npm install -g grunt-cli
 
 install:
