@@ -17,13 +17,14 @@
 
 Edit files in these paths
 
-- `.travis/` - travis VM config
-- `assets/` - test fixtures, shims, etc
-- `app/` - app coffee
+- `.travis/` - travis VM config (WIP)
+- `assets/` - SASS, webfonts, images, etc. pre-asset-pipeline
+- `app/` - Backbone app coffee
+- `config/` - Grunt tasks and Karma config
 - `templates/` - Mustache templates
 - `test/` - test fixtures, shims, etc
   - `app/` - tests for the backbone-coffee app
-  - `e2e/` - end-to-end tests using selenium/webdriver
+  - `e2e/` - end-to-end/integration tests using selenium/webdriver
   - `php/` - phpunit tests
 
 ### Generated
@@ -38,23 +39,27 @@ Task runner will generate files into these paths
 
 Managed by package managers and tmp folders
 
-- `bower_components/`
+- `bower_components/`, versioned
 - `node_modules/`
-- `tmp/` - broccoli cache
-- `.sass-cache/` - sass cache
+- `tmp/` - broccoli cache, grunt cleaned
+- `temp/` - browserify cache, grunt cleaned
+- `.sass-cache/` - sass cache, grunt cleaned
 
 ## Other badges and stuff
 
 | Service      | Status
 | -----------: | :--------
-| Codeship     | [![Codeship Status for davidosomething/glutton][codeshipBadge]][codeshipLink]<br>
-| Code Climate | [![Code Climate Coverage][codeClimateCoverageBadge]][codeClimateLink]<br>
-| drone.io     | [![Build Status][droneIoBadge]][droneIoLink]<br>
-| Semaphore    | [![Build Status][semaphoreBadge]][semaphoreLink]<br>
+| Codeship     | [![Codeship Status for davidosomething/glutton][codeshipBadge]][codeshipLink]
+| Code Climate | [![Code Climate Coverage][codeClimateCoverageBadge]][codeClimateLink]
+| drone.io     | [![Build Status][droneIoBadge]][droneIoLink]
+| Semaphore    | [![Build Status][semaphoreBadge]][semaphoreLink]
+| Circle CI    | [![Circle CI][circleCIBadge]][circleCILink]
+
 
 ----
 
-
+[circleCIBadge]:    https://circleci.com/gh/davidosomething/glutton/tree/master.png?style=badge
+[circleCILink]:     https://circleci.com/gh/davidosomething/glutton/tree/master
 [codeClimateBadge]: https://codeclimate.com/github/davidosomething/glutton/badges/gpa.svg
 [codeClimateLink]:  https://codeclimate.com/github/davidosomething/glutton
 [codeClimateCoverageBadge]: https://codeclimate.com/github/davidosomething/glutton/badges/coverage.svg
