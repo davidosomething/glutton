@@ -25,8 +25,8 @@ module.exports = (config)->
       debug: true
       extensions: [ '.coffee', '.js', '.json' ]
       transform: [
-        'browserify-shim'
-        'coffeeify'
+        'browserify-shim',
+        'coffeeify',
         [
           'browserify-istanbul', { ignore: [
             '**/bower_components/**/*.*'
