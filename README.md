@@ -8,7 +8,7 @@
 | -------: | :--------
 | Build    | [![Travis CI build status][travisBadge]][travisLink]
 | Test     | [![Coverage Status][coverallsBadge]][coverallsLink] [![Code Climate][codeClimateBadge]][codeClimateLink]
-| NPM      | [![David dependency status][davidBadge]][davidLink] [![Development Dependency Status][davidDevBadge]][davidDevLink]
+| NPM      | [![David dependency status][davidBadge]][davidLink] [![Development Dependency Status][davidDevBadge]][davidDevLink] [![Peer Dependency Status][davidPeerBadge]][davidPeerLink]
 | Gems     | [![Gemnasium dependency status][gemnasiumBadge]][gemnasiumLink]
 
 ## Paths
@@ -71,6 +71,8 @@ Managed by package managers and tmp folders
 [davidLink]:      https://david-dm.org/davidosomething/glutton#info=dependencies
 [davidDevBadge]:  https://david-dm.org/davidosomething/glutton/dev-status.png?theme=shields.io
 [davidDevLink]:   https://david-dm.org/davidosomething/glutton#info=devDependencies
+[davidDevBadge]:  https://david-dm.org/davidosomething/glutton/peer-status.png?theme=shields.io
+[davidDevLink]:   https://david-dm.org/davidosomething/glutton#info=peerDependencies
 [droneIoBadge]:   https://drone.io/github.com/davidosomething/glutton/status.png
 [droneIoLink]:    https://drone.io/github.com/davidosomething/glutton/latest
 [gemnasiumBadge]: http://img.shields.io/gemnasium/davidosomething/glutton.svg
