@@ -7,7 +7,7 @@
 | Service  | Status
 | -------: | :--------
 | Build    | [![Travis CI build status][travisBadge]][travisLink]
-| Test     | [![Coverage Status][coverallsBadge]][coverallsLink] [![Code Climate][codeClimateBadge]][codeClimateLink]
+| Test     | [![Coverage Status][coverallsBadge]][coverallsLink] [![Code Climate][codeClimateBadge]][codeClimateLink] [![SensioLabsInsight][SensioBadge]][SensioLink]
 | NPM      | [![David dependency status][davidBadge]][davidLink] [![Development Dependency Status][davidDevBadge]][davidDevLink] [![Peer Dependency Status][davidPeerBadge]][davidPeerLink]
 | Gems     | [![Gemnasium dependency status][gemnasiumBadge]][gemnasiumLink]
 
@@ -63,22 +63,23 @@ Managed by package managers and tmp folders
 [codeClimateBadge]: https://codeclimate.com/github/davidosomething/glutton/badges/gpa.svg
 [codeClimateLink]:  https://codeclimate.com/github/davidosomething/glutton
 [codeClimateCoverageBadge]: https://codeclimate.com/github/davidosomething/glutton/badges/coverage.svg
-[codeshipBadge]:  https://www.codeship.io/projects/4c4f8010-0f00-0132-fc79-02c0648a600f/status?branch=master
-[codeshipLink]:   https://www.codeship.io/projects/32535
-[coverallsBadge]: https://coveralls.io/repos/davidosomething/glutton/badge.png
-[coverallsLink]:  https://coveralls.io/r/davidosomething/glutton
-[davidBadge]:     https://david-dm.org/davidosomething/glutton.png?theme=shields.io
-[davidLink]:      https://david-dm.org/davidosomething/glutton#info=dependencies
-[davidDevBadge]:  https://david-dm.org/davidosomething/glutton/dev-status.png?theme=shields.io
-[davidDevLink]:   https://david-dm.org/davidosomething/glutton#info=devDependencies
-[davidPeerBadge]:  https://david-dm.org/davidosomething/glutton/peer-status.png?theme=shields.io
-[davidPeerLink]:   https://david-dm.org/davidosomething/glutton#info=peerDependencies
-[droneIoBadge]:   https://drone.io/github.com/davidosomething/glutton/status.png
-[droneIoLink]:    https://drone.io/github.com/davidosomething/glutton/latest
-[gemnasiumBadge]: http://img.shields.io/gemnasium/davidosomething/glutton.svg
-[gemnasiumLink]:  https://gemnasium.com/davidosomething/glutton
-[semaphoreBadge]: https://semaphoreapp.com/api/v1/projects/b987bb51-e328-4052-a870-f83c3b7acd4d/242696/shields_badge.png
-[semaphoreLink]:  https://semaphoreapp.com/davidosomething/glutton
-[travisLink]:     https://travis-ci.org/davidosomething/glutton
-[travisBadge]:    https://travis-ci.org/davidosomething/glutton.svg?branch=master
-
+[codeshipBadge]:    https://www.codeship.io/projects/4c4f8010-0f00-0132-fc79-02c0648a600f/status?branch=master
+[codeshipLink]:     https://www.codeship.io/projects/32535
+[coverallsBadge]:   https://coveralls.io/repos/davidosomething/glutton/badge.png
+[coverallsLink]:    https://coveralls.io/r/davidosomething/glutton
+[davidBadge]:       https://david-dm.org/davidosomething/glutton.png?theme=shields.io
+[davidLink]:        https://david-dm.org/davidosomething/glutton#info=dependencies
+[davidDevBadge]:    https://david-dm.org/davidosomething/glutton/dev-status.png?theme=shields.io
+[davidDevLink]:     https://david-dm.org/davidosomething/glutton#info=devDependencies
+[davidPeerBadge]:   https://david-dm.org/davidosomething/glutton/peer-status.png?theme=shields.io
+[davidPeerLink]:    https://david-dm.org/davidosomething/glutton#info=peerDependencies
+[droneIoBadge]:     https://drone.io/github.com/davidosomething/glutton/status.png
+[droneIoLink]:      https://drone.io/github.com/davidosomething/glutton/latest
+[gemnasiumBadge]:   http://img.shields.io/gemnasium/davidosomething/glutton.svg
+[gemnasiumLink]:    https://gemnasium.com/davidosomething/glutton
+[semaphoreBadge]:   https://semaphoreapp.com/api/v1/projects/b987bb51-e328-4052-a870-f83c3b7acd4d/242696/shields_badge.png
+[semaphoreLink]:    https://semaphoreapp.com/davidosomething/glutton
+[sensioLink]:       https://insight.sensiolabs.com/projects/af473c0e-78c7-4117-8721-63ccd72e95c1
+[sensioBadge]:      https://insight.sensiolabs.com/projects/af473c0e-78c7-4117-8721-63ccd72e95c1/mini.png
+[travisLink]:       https://travis-ci.org/davidosomething/glutton
+[travisBadge]:      https://travis-ci.org/davidosomething/glutton.svg?branch=master
