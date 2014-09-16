@@ -34,7 +34,11 @@ module.exports = ->
     'build'
   ]
 
-  @registerTask 'test', 'Run test suites', [
+  @registerTask 't', 'Run test suites, quick', [
+    # phpunit
+    'karma:quick'
+  ]
+  @registerTask 'test', 'Run test suites, all browsers', [
     # phpunit
     'karma:all'
   ]
@@ -53,6 +57,13 @@ module.exports = ->
   @registerTask 'document', 'Run documentation generators', [
     'codo'
     'sassdoc'
+  ]
+
+  @registerTask 'ci', [
+    'release'
+    'karma:ci'
+    'document'
+    'report'
   ]
 
   @registerTask 'default', [

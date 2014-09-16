@@ -4,13 +4,13 @@ build:
         - script:
             name: install dependencies
             code: |
-              composer install --no-interaction
-              bundle install
+              bundle check || bundle install --deployment
+              composer install --prefer-source --no-interaction
               npm install -g grunt-cli
               npm install
         - script:
             name: Build project
             code: |
-              grunt release
+              grunt ci
 
 # vim: set expandtab:

@@ -6,7 +6,7 @@ before_install:
   - npm install -g grunt-cli
 
 install:
-  - bundle check || bundle install
+  - bundle check || bundle install --deployment
   - composer install --prefer-source --no-interaction
   - npm install
 
@@ -15,8 +15,7 @@ before_script:
   - sh -e /etc/init.d/xvfb start
 
 script:
-  - grunt release
-  - grunt test
+  - grunt ci
 
 after_script:
   - grunt coveralls

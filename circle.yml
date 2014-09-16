@@ -24,9 +24,6 @@ dependencies:
 
 test:
   override:
-    - grunt release
-    - grunt test
-  post:
-    - grunt report
+    - grunt ci
     - cp reports/coverage/PhantomJS\ 1.9.7\ \(Linux\)/lcov.info $CIRCLE_ARTIFACTS
 
