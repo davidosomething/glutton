@@ -22,9 +22,19 @@ module.exports = (config)->
       'test/**/*.coffee': ['browserify']
 
     browserify:
-      extensions: [ '.coffee', '.js', '.json' ]
       debug: true
-      transform: [ 'browserify-shim', 'coffeeify', 'istanbulify' ]#'browserify-istanbul' ]
+      extensions: [ '.coffee', '.js', '.json' ]
+      transform: [
+        'browserify-shim'
+        'coffeeify'
+        [
+          'browserify-istanbul', { ignore: [
+            '**/bower_components/**/*.*'
+            '**/node_modules/**/*.*'
+            '**/test/**/*.*'
+          ] }
+        ]
+      ]
 
     reporters: ['spec', 'coverage']
 
