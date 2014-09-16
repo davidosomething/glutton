@@ -1,8 +1,3 @@
-chai = require('chai')
-expect = chai.expect
-casper_chai = require('casper-chai')
-chai.use(casper_chai)
-
 describe 'Google adds www', ->
 
   before ->
