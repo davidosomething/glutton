@@ -43,7 +43,7 @@ module.exports = ->
   ]
 
   @registerTask 'e2e', 'Run end-to-end test suites', [
-    'mochaWebdriver'
+    'mocha_casperjs'
   ]
 
   @registerTask 'report', 'Run reporters against a successful build', [
