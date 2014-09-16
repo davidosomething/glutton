@@ -8,34 +8,30 @@ module.exports = ->
     options:
       configFile: 'karma.conf.coffee'
       logLevel: 'ERROR'
+      coverageReporter:
+        type: 'text-summary'
 
     all: # for CI
       autoWatch: false
       singleRun: true
-      coverageReporter:
-        type: 'text-summary'
 
     ci: # for CI
       autoWatch: false
-      singleRun: true
       coverageReporter:
         dir:    'reports/coverage/'
         reporters: [
           { type: 'lcovonly' }
           { type: 'text-summary' }
         ]
+      singleRun: true
 
     quick: # for CLI
       autoWatch: false
-      singleRun: true
       browsers: ['PhantomJS']
-      coverageReporter:
-        type: 'text-summary'
+      singleRun: true
 
     watch: # for dev
-      singleRun: false
       autoWatch: true
       browsers: ['PhantomJS']
-      coverageReporter:
-        type: 'text-summary'
+      singleRun: false
 
