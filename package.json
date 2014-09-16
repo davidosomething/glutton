@@ -48,7 +48,6 @@
     "grunt-karma": "^0.9.0",
     "grunt-karma-coveralls": "^2.5.1",
     "grunt-mocha-casperjs": "^0.1.4",
-    "grunt-mocha-webdriver": "^1.1.2",
     "grunt-notify": "^0.3.0",
     "grunt-pagespeed": "^0.3.0",
     "grunt-perfbudget": "^0.1.5",
