@@ -71,8 +71,8 @@ Managed by package managers and tmp folders
 [davidLink]:      https://david-dm.org/davidosomething/glutton#info=dependencies
 [davidDevBadge]:  https://david-dm.org/davidosomething/glutton/dev-status.png?theme=shields.io
 [davidDevLink]:   https://david-dm.org/davidosomething/glutton#info=devDependencies
-[davidDevBadge]:  https://david-dm.org/davidosomething/glutton/peer-status.png?theme=shields.io
-[davidDevLink]:   https://david-dm.org/davidosomething/glutton#info=peerDependencies
+[davidPeerBadge]:  https://david-dm.org/davidosomething/glutton/peer-status.png?theme=shields.io
+[davidPeerLink]:   https://david-dm.org/davidosomething/glutton#info=peerDependencies
 [droneIoBadge]:   https://drone.io/github.com/davidosomething/glutton/status.png
 [droneIoLink]:    https://drone.io/github.com/davidosomething/glutton/latest
 [gemnasiumBadge]: http://img.shields.io/gemnasium/davidosomething/glutton.svg
