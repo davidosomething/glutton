@@ -1,22 +1,14 @@
-# webdriver = require 'selenium-webdriver'
 chai = require('chai')
 expect = chai.expect
-#
-# driver = new webdriver.Builder().
-#   withCapabilities(webdriver.Capabilities.chrome()).
-#   build()
-#
-describe 'basic test', ->
+casper_chai = require('casper-chai')
+chai.use(casper_chai)
 
-  @timeout 5000
+describe 'Google adds www', ->
 
-  it 'should be on correct page', (done)->
-    b = @browser
-    b
-      .get 'http://google.com'
-      .title (e, t)->
-        console.log '    - title is ' + t
-        expect(t).to.equal('Google')
-      .fin ->
-        done()
+  before ->
+    casper.start 'http://google.com'
 
+  it 'should redirect to google with www', ->
+    casper.then ->
+      expect(/http:\/\/google.com/).to.not.matchCurrentUrl
+      expect(/http:\/\/www.google.com/).to.matchCurrentUrl
