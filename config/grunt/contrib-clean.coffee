@@ -3,5 +3,7 @@ module.exports = ->
   @loadNpmTasks 'grunt-contrib-clean'
 
   @config 'clean',
-    static: [ 'static/*' ]
-    reports: [ 'reports/*' ]
+    docs:     [ 'docs/*' ]
+    reports:  [ 'reports/*' ]
+    static:   [ 'static/*' ]
+    temp:     [ '.sass-cache/*', 'temp/*', 'tmp/*' ]
