@@ -11,11 +11,14 @@ install:
   - npm install
 
 before_script:
+  - grunt lint
   - export DISPLAY=:99.0
   - sh -e /etc/init.d/xvfb start
 
 script:
-  - grunt ci
+  - grunt release
+  - grunt karma:ci
+  - grunt artifacts
 
 after_script:
   - grunt coveralls

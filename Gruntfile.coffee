@@ -29,7 +29,6 @@ module.exports = ->
   ]
 
   @registerTask 'release', [
-    'lint'
     'clean'
     'build'
   ]
@@ -59,9 +58,7 @@ module.exports = ->
     'sassdoc'
   ]
 
-  @registerTask 'ci', [
-    'release'
-    'karma:ci'
+  @registerTask 'artifacts', 'Generate build artifacts', [
     'document'
     'report'
   ]

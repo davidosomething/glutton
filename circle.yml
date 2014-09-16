@@ -23,7 +23,11 @@ dependencies:
     - npm install
 
 test:
+  pre:
+    - grunt lint
   override:
-    - grunt ci
+    - grunt release
+    - grunt karma:ci
     - cp reports/coverage/PhantomJS\ 1.9.7\ \(Linux\)/lcov.info $CIRCLE_ARTIFACTS
+    - grunt artifacts
 

@@ -11,6 +11,10 @@ build:
         - script:
             name: Build project
             code: |
-              grunt ci
+              grunt lint
+              grunt release
+              grunt karma:ci
+              grunt artifacts
+
 
 # vim: set expandtab:
