@@ -26,6 +26,9 @@ class Glutton
 		}
 	}
 
+	/**
+	 * @param string $filepath
+	 */
 	static public function theme( $filepath ) {
 		return get_stylesheet_directory() . $filepath;
 	}

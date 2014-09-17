@@ -35,6 +35,9 @@ abstract class GluttonView
 		return $template->render( $data );
 	}
 
+	/**
+	 * @param string $_filename
+	 */
 	public function template( $_filename, $data = array() ) {
 		extract( $data );
 
