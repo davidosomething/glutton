@@ -7,7 +7,7 @@
 | Service  | Status
 | -------: | :--------
 | Build    | [![Travis CI build status][travisBadge]][travisLink]
-| Test     | [![Coverage Status][coverallsBadge]][coverallsLink] [![Code Climate][codeClimateBadge]][codeClimateLink] [![SensioLabsInsight][SensioBadge]][SensioLink]
+| Test     | [![Coverage Status][coverallsBadge]][coverallsLink] [![Code Climate][codeClimateBadge]][codeClimateLink] [![SensioLabsInsight][SensioBadge]][SensioLink] [![Scrutinizer Code Quality][scrutinizerBadge]][scrutinizerLink]
 | NPM      | [![David dependency status][davidBadge]][davidLink] [![Development Dependency Status][davidDevBadge]][davidDevLink] [![Peer Dependency Status][davidPeerBadge]][davidPeerLink]
 | Gems     | [![Gemnasium dependency status][gemnasiumBadge]][gemnasiumLink]
 
@@ -77,6 +77,8 @@ Managed by package managers and tmp folders
 [droneIoLink]:      https://drone.io/github.com/davidosomething/glutton/latest
 [gemnasiumBadge]:   http://img.shields.io/gemnasium/davidosomething/glutton.svg
 [gemnasiumLink]:    https://gemnasium.com/davidosomething/glutton
+[scrutinizerBadge]: https://scrutinizer-ci.com/g/davidosomething/glutton/badges/quality-score.png?b=master
+[scrutinizerLink]:  https://scrutinizer-ci.com/g/davidosomething/glutton/?branch=master
 [semaphoreBadge]:   https://semaphoreapp.com/api/v1/projects/b987bb51-e328-4052-a870-f83c3b7acd4d/242696/shields_badge.png
 [semaphoreLink]:    https://semaphoreapp.com/davidosomething/glutton
 [sensioLink]:       https://insight.sensiolabs.com/projects/af473c0e-78c7-4117-8721-63ccd72e95c1
