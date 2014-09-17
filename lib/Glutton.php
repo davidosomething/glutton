@@ -1,7 +1,7 @@
 <?php
 class Glutton
 {
-	static private $_version;
+	static protected $_version;
 	static public function version() {
 		if ( ! static::$_version ) {
 			$composer_json_file = trailingslashit( get_stylesheet_directory_uri() ) . 'composer.json';

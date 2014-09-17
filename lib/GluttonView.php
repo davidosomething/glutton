@@ -8,6 +8,7 @@ abstract class GluttonView
 
 	private $_themePath;
 	private $_child;
+	public $query;
 
 	/**
 	 * __construct
