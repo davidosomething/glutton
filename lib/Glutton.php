@@ -88,11 +88,11 @@ SNIPPET;
 	}
 
 	/**
- 	* glutton_jsmonitor
+ 	* jsmonitor
  	*
  	* Echo out the JSMonitor.io snippet for JS error tracking
  	*/
-	static public function glutton_jsmonitor() {
+	static public function jsmonitor() {
 		echo <<<SNIPPET
 		<script type="text/javascript">
 		var ue_params = ue_params || [];ue_params.push("UE-206861348");
