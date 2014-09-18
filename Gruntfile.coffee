@@ -63,7 +63,12 @@ module.exports = ->
     'report'
   ]
 
+  @registerTask 'w', [
+    'karma:watch:start'
+    'watch'
+  ]
+
   @registerTask 'default', [
     'build'
-    # 'watch'
+    'w'
   ]

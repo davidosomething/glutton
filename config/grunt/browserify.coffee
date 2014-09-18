@@ -56,6 +56,7 @@ module.exports = ->
     watch:
       options:
         browserifyOptions: '<%= browserify.app.options.browserifyOptions %>'
+        external: _.keys(pkg.browser)
         watch: true
       files: '<%= browserify.app.files %>'
 

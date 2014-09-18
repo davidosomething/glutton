@@ -11,6 +11,10 @@
 | NPM      | [![David dependency status][davidBadge]][davidLink] [![Development Dependency Status][davidDevBadge]][davidDevLink] [![Peer Dependency Status][davidPeerBadge]][davidPeerLink]
 | Gems     | [![Gemnasium dependency status][gemnasiumBadge]][gemnasiumLink]
 
+## Running Build Tasks
+
+Use `grunt w` instead of `grunt watch` so the phantomJS server can start first.
+
 ## Paths
 
 ### Working

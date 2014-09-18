@@ -30,5 +30,6 @@ module.exports = ->
     watch: # for dev
       background: true
       browsers: ['PhantomJS']
+      reporters: 'dots'
       singleRun: false
 
