@@ -65,6 +65,5 @@ module.exports = ->
 
   @registerTask 'default', [
     'build'
-    'browserify:watch'
-    'karma:watch'
+    # 'watch'
   ]

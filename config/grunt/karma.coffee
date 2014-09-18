@@ -32,6 +32,7 @@ module.exports = ->
 
     watch: # for dev
       autoWatch: true
+      background: true
       browsers: ['PhantomJS']
       singleRun: false
 
