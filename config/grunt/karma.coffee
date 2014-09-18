@@ -12,11 +12,9 @@ module.exports = ->
         type: 'text-summary'
 
     all: # for CI
-      autoWatch: false
       singleRun: true
 
     ci: # for CI
-      autoWatch: false
       coverageReporter:
         dir:    'reports/coverage/'
         reporters: [
@@ -26,12 +24,10 @@ module.exports = ->
       singleRun: true
 
     quick: # for CLI
-      autoWatch: false
       browsers: ['PhantomJS']
       singleRun: true
 
     watch: # for dev
-      autoWatch: true
       background: true
       browsers: ['PhantomJS']
       singleRun: false

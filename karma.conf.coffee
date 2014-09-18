@@ -47,4 +47,5 @@ module.exports = (config)->
 
     colors: true
     logLevel: config.DEBUG
+    autoWatch: false  # use grunt to watch
     singleRun: true

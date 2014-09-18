@@ -14,7 +14,7 @@ module.exports = ->
       ]
       tasks: [
         'browserify:watch'
-        'karma:watch'
+        'karma:watch:run'
       ]
 
     sass:
