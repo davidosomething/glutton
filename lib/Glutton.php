@@ -97,7 +97,7 @@ SNIPPET;
 						code_version: "{$glutton_rollbar_code_version}",
 						guess_uncaught_frames: true
 					}
-				}
+				},
 				environment: "{$glutton_env}"
 			}
 		};
