@@ -2,6 +2,7 @@
 /node_modules/
 
 # managed
+/bower_components/
 /vendor/
 
 # compilation

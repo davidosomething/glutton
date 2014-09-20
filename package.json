@@ -14,10 +14,10 @@
     "test": "grunt test"
   },
   "browser": {
-    "underscore": "./bower_components/lodash/dist/lodash.underscore.min.js",
-    "backbone": "./bower_components/backbone/backbone.js",
-    "jquery": "./bower_components/jquery/dist/jquery.min.js",
-    "rollbar": "./bower_components/rollbar.js/dist/rollbar.commonjs.min.js"
+    "underscore": "./assets/bower/lodash/js/lodash.underscore.min.js",
+    "backbone": "./assets/bower/backbone/js/backbone.js",
+    "jquery": "./assets/bower/jquery/js/jquery.min.js",
+    "rollbar": "./assets/bower/rollbar.js/js/rollbar.commonjs.min.js"
   },
   "browserify-shim": {
     "underscore": "_",
@@ -37,6 +37,7 @@
     "coffeelint-stylish": "^0.1.0",
     "grunt": "^0.4.5",
     "grunt-autoprefixer": "^1.0.1",
+    "grunt-bower-task": "^0.4.0",
     "grunt-browserify": "^3.0.0",
     "grunt-bump": "0.0.15",
     "grunt-codo": "^0.2.0",
