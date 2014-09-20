@@ -13,7 +13,8 @@
 
 ## Running Build Tasks
 
-Use `grunt w` instead of `grunt watch` so the phantomJS server can start first.
+* Use `grunt w` instead of `grunt watch` so the phantomJS server can start
+  first.
 
 ## Paths
 

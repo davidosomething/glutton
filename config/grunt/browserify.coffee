@@ -20,6 +20,7 @@ module.exports = ->
       return aliasesArray
     , [])
 
+
   #
   # Config
   #
@@ -29,8 +30,6 @@ module.exports = ->
   # The "extensions" browserifyOption has to exist for each task
   # doesn't inherit from parent options
   @config 'browserify',
-    options:
-      transform: [ 'coffeeify' ]
     lib:
       options:
         # use this since we use bower instead of NPM for components
@@ -51,6 +50,17 @@ module.exports = ->
           extensions: [ '.coffee', '.js', '.json' ]
         # use things in lib
         external: _.keys(pkg.browser)
+        transform: [ 'coffeeify' ]
+        plugin: [
+          (b)->
+            mapPath = 'static/app/'
+            mapFile = 'app.js.map'
+            minifyify = require 'minifyify'
+            b.plugin minifyify, {
+              map:    mapFile #pkg.siteroot + mapFile
+              output: mapPath + mapFile
+            }
+        ]
       files:
         'static/app/app.js': [ 'app/**/*.coffee' ]
     watch:
