@@ -3,11 +3,19 @@ class Glutton
 {
 	static protected $_version_data;
 
+	/**
+	 * getJson
+	 *
+	 * @param string $filename
+	 */
+	static public function getJson($filename) {
+		return json_decode( utf8_encode( file_get_contents( $filename ) ) );
+	}
+
 	static public function getVersionData() {
 		if ( ! static::$_version_data ) {
-			$version_json_file = trailingslashit( get_stylesheet_directory_uri() ) . 'version.json';
-			$version_json_data = file_get_contents( $version_json_file );
-			static::$_version_data = json_decode( utf8_encode( $version_json_data ) );
+			$version_json_file = trailingslashit( get_stylesheet_directory() ) . 'version.json';
+			static::$_version_data = static::getJson( $version_json_file );
 		}
 		return static::$_version_data;
 	}
@@ -73,12 +81,12 @@ class Glutton
 	* Echo out the bugsnag snippet for JS error tracking
 	*/
 	static public function bugsnag() {
-		$glutton_bugsnag_api_key = GLUTTON_BUGSNAG_API_KEY;
-		$glutton_app_version = static::version();
+		$bugsnag_api_key = GLUTTON_BUGSNAG_API_KEY;
+		$app_version = static::version();
 		echo <<<SNIPPET
 		<script src="//d2wy8f7a9ursnm.cloudfront.net/bugsnag-2.min.js"
-			data-apikey="{$glutton_bugsnag_api_key}"
-			data-appversion="{$glutton_app_version}"></script>
+			data-apikey="{$bugsnag_api_key}"
+			data-appversion="{$app_version}"></script>
 SNIPPET;
 	}
 
@@ -88,9 +96,10 @@ SNIPPET;
  	* Echo out the JSMonitor.io snippet for JS error tracking
  	*/
 	static public function jsmonitor() {
+		$jsmonitor_id = GLUTTON_JSMONITOR_ID;
 		echo <<<SNIPPET
 		<script type="text/javascript">
-		var ue_params = ue_params || [];ue_params.push("UE-206861348");
+		var ue_params = ue_params || [];ue_params.push("{$jsmonitor_id}");
 		(function() {var ue = document.createElement('script'); ue.type = 'text/javascript'; ue.async = true;
 		ue.src = (("https:" == document.location.protocol) ? "https://" : "http://") + 'app.jsmonitor.io/js/jsmonitor.js';
 		var script = document.getElementsByTagName('script')[0]; script.parentNode.insertBefore(ue, script);})();

@@ -3,6 +3,7 @@ defined( 'WP_ENV' ) or define( 'WP_ENV', 'local' );
 
 // client side api keys only! no private stuff
 define( 'GLUTTON_BUGSNAG_API_KEY', '9fd6c80ccab8cc199fc428d5ecfb83b1' );
+define( 'GLUTTON_JSMONITOR_ID', 'UE-206861348' );
 
 require_once __DIR__ . '/vendor/autoload.php';
 
