@@ -9,6 +9,6 @@ module.exports = ->
   @config 'copy',
     dist:
       files:
-        'assets/sass/vendor/_normalize.scss': 'bower_components/normalize.css/normalize.css'
-        'assets/sass/vendor/_normalize-opentype.scss': 'bower_components/normalize-opentype.css/normalize-opentype.css'
+        'assets/sass/vendor/_normalize.scss': 'assets/bower/normalize.css/css/normalize.css'
+        'assets/sass/vendor/_normalize-opentype.scss': 'assets/bower/normalize-opentype.css/css/normalize-opentype.css'
 

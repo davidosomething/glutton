@@ -31,10 +31,10 @@
 			"js": "dist/lodash.underscore.min.js"
 		},
 		"normalize.css": {
-			"css": "x"
+			"css": "normalize.css"
 		},
 		"normalize-opentype.css": {
-			"css": "x"
+			"css": "normalize-opentype.css"
 		},
 		"rollbar.js": {
 			"js": "dist/rollbar.commonjs.min.js"

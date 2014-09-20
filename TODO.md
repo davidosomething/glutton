@@ -1,7 +1,5 @@
 # TODO
 
-- [ ] Remove bower cruft, manage with grunt-bower-task
-
 - [ ] Create travis installation of WP
 
 - [ ] Setup proxyquireify for require mocking
@@ -18,3 +16,7 @@
   * [ ] grunt-perfbudget
   * [ ] grunt-wpt
   * [ ] grunt-yslow
+
+# DONE
+
+- [x] Remove bower cruft, manage with grunt-bower-task

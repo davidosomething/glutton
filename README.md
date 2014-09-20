@@ -24,6 +24,7 @@ Edit files in these paths
 
 - `.travis/` - travis VM config (WIP)
 - `assets/` - SASS, webfonts, images, etc. pre-asset-pipeline
+  - `bower/` - Each subdir corresponds to a bower package, managed by grunt-bower-task.
 - `app/` - Backbone app coffee
   - `c/` - Collections
   - `m/` - Models
@@ -55,7 +56,6 @@ Task runner will generate files into these paths
 
 Managed by package managers and tmp folders
 
-- `bower_components/`, versioned
 - `node_modules/`
 - `tmp/` - broccoli cache, grunt cleaned
 - `temp/` - browserify cache, grunt cleaned
