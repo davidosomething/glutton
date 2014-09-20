@@ -52,6 +52,7 @@ module.exports = (grunt)->
   ]
 
   @registerTask 'report', 'Run reporters against a successful build', [
+    'csscss'
     'stylestats'
     #'pagespeed' not configured
     #'yslow' not configured

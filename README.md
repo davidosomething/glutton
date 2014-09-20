@@ -25,11 +25,18 @@ Edit files in these paths
 - `.travis/` - travis VM config (WIP)
 - `assets/` - SASS, webfonts, images, etc. pre-asset-pipeline
 - `app/` - Backbone app coffee
-- `config/` - Grunt tasks and Karma config
+  - `c/` - Collections
+  - `m/` - Models
+  - `p/` - Plugins
+  - `r/` - Router
+  - `u/` - Modules (e.g., design patterns: Adapters, Mediators, .etc.)
+  - `v/` - Views
+  - `x/` - Mixins
+- `config/` - Grunt tasks, Karma config, tooling
 - `templates/` - Mustache templates
 - `test/` - test fixtures, shims, etc
-  - `app/` - tests for the backbone-coffee app
-  - `e2e/` - end-to-end/integration tests using selenium/webdriver
+  - `app/` - unit tests for the backbone-coffee app
+  - `e2e/` - end-to-end/integration tests using phantomJS/selenium+webdriver
   - `php/` - phpunit tests
 
 ### Generated
@@ -39,6 +46,10 @@ Task runner will generate files into these paths
 - `docs/` - app documentation
 - `reports/` - app reports, code coverage
 - `static/` - compiled/optimized assets
+  - `app/` - JS and sourcemaps
+    - `app.js` - Application bundle
+    - `lib.js` - Libraries, plugins bundle
+  - `assets/` - CSS and sourcemaps, images, other assets
 
 ### Managed
 
