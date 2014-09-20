@@ -1,0 +1,59 @@
+{
+  "name": "rollbar",
+  "version": "1.1.8",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/rollbar/rollbar.js"
+  },
+  "devDependencies": {
+    "mocha": "~1.14.0",
+    "uglify-js": "~2.4.3",
+    "jshint": "~2.3.0",
+    "chai": "~1.8.1",
+    "phantomjs": "~1.9.2-2",
+    "sinon": "~1.7.3",
+    "grunt": "~0.4.2",
+    "grunt-contrib-jshint": "~0.7.2",
+    "grunt-contrib-uglify": "~0.2.2",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-contrib-connect": "~0.5.0",
+    "grunt-mocha": "~0.4.7",
+    "express": "~3.4.7",
+    "grunt-express": "~1.2.1",
+    "grunt-text-replace": "~0.3.10",
+    "semver": "~2.2.1",
+    "mocha-phantomjs": "~3.3.0",
+    "grunt-cli": "~0.1.11",
+    "grunt-tagrelease": "~0.3.0",
+    "grunt-bumpup": "~0.5.0",
+    "grunt-contrib-copy": "~0.5.0",
+    "grunt-saucelabs": "~4.1.2"
+  },
+  "scripts": {
+    "test": "make test"
+  },
+  "cdn": {
+    "host": "d37gvrvc0wt4s1.cloudfront.net"
+  },
+  "defaults": {
+    "endpoint": "api.rollbar.com/api/1/",
+    "scrubFields": [
+      "passwd",
+      "password",
+      "secret",
+      "confirm_password",
+      "password_confirmation"
+    ],
+    "logLevel": "debug",
+    "reportLevel": "debug",
+    "uncaughtErrorLevel": "warning",
+    "maxItems": 0,
+    "itemsPerMin": 60
+  },
+  "plugins": {
+    "jquery": {
+      "version": "0.0.8"
+    }
+  }
+}

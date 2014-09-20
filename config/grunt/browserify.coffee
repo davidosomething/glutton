@@ -1,3 +1,6 @@
+_         = require 'lodash'
+minifyify = require 'minifyify'
+
 module.exports = ->
 
   @loadNpmTasks 'grunt-browserify'
@@ -7,7 +10,6 @@ module.exports = ->
   #
   # Browserify shimming
   #
-  _ = require('lodash')
 
   pkg = @file.readJSON "package.json"
 
@@ -38,9 +40,13 @@ module.exports = ->
         browserifyOptions:
           bundleExternal: false
           debug: false
-          extensions: [ '.coffee', '.js', '.json' ]
+          extensions: [ '.js', '.json' ]
           noparse: [ 'jquery' ]
         external: null
+        plugin: [
+          (b)->
+            b.plugin minifyify, { map: false }
+        ]
       files:
         'static/app/lib.js': [ '.' ]
     app:
@@ -50,17 +56,16 @@ module.exports = ->
           extensions: [ '.coffee', '.js', '.json' ]
         # use things in lib
         external: _.keys(pkg.browser)
-        transform: [ 'coffeeify' ]
         plugin: [
           (b)->
             mapPath = 'static/app/'
             mapFile = 'app.js.map'
-            minifyify = require 'minifyify'
             b.plugin minifyify, {
               map:    mapFile #pkg.siteroot + mapFile
               output: mapPath + mapFile
             }
         ]
+        transform: [ 'coffeeify' ]
       files:
         'static/app/app.js': [ 'app/**/*.coffee' ]
     watch:

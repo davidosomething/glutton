@@ -1,0 +1,21 @@
+{
+  "name": "rollbar",
+  "version": "1.1.8",
+  "dependencies": {},
+  "main": [
+    "dist/rollbar.js",
+    "dist/rollbar.snippet.js",
+    "src/plugins/jquery.js"
+  ],
+  "homepage": "https://github.com/rollbar/rollbar.js",
+  "_release": "1.1.8",
+  "_resolution": {
+    "type": "version",
+    "tag": "v1.1.8",
+    "commit": "cb8cdcf64f7e4b6d7d46c80cdfb62a1579d0f040"
+  },
+  "_source": "git://github.com/rollbar/rollbar.js.git",
+  "_target": "~1.1.8",
+  "_originalSource": "rollbar.js",
+  "_direct": true
+}

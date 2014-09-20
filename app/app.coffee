@@ -1,16 +1,23 @@
 # Glutton App
 # main app entry point
 
-Backbone = require('backbone')
-$ = require('jquery')
+# Lib
+$        = require 'jquery'
+Backbone = require 'backbone'
 Backbone.$ = $
 
-DefaultRouter = require('./r/default')
+# Loggers
+require './p/rollbar'
 
+# App
+DefaultRouter = require './r/default'
+
+# App init
 app = window.app ||= {}
 app.OK = true
 app.root = '/'
 
+# Router init
 app.router = new DefaultRouter()
 Backbone.history.start({
   pushState: true

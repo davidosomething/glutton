@@ -14,9 +14,10 @@
     "test": "grunt test"
   },
   "browser": {
-    "underscore": "./bower_components/lodash/dist/lodash.underscore.js",
+    "underscore": "./bower_components/lodash/dist/lodash.underscore.min.js",
     "backbone": "./bower_components/backbone/backbone.js",
-    "jquery": "./bower_components/jquery/dist/jquery.js"
+    "jquery": "./bower_components/jquery/dist/jquery.min.js",
+    "rollbar": "./bower_components/rollbar.js/dist/rollbar.commonjs.min.js"
   },
   "browserify-shim": {
     "underscore": "_",
