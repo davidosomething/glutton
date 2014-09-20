@@ -1,15 +1,23 @@
 <?php
 class Glutton
 {
-	static protected $_version;
-	static public function version() {
-		if ( ! static::$_version ) {
-			$composer_json_file = trailingslashit( get_stylesheet_directory_uri() ) . 'composer.json';
-			$composer_json_data = file_get_contents( $composer_json_file );
-			$composer_data = json_decode( $composer_json_data );
-			static::$_version = $composer_data->version;
+	static protected $_version_data;
+
+	static public function getVersionData() {
+		if ( ! static::$_version_data ) {
+			$version_json_file = trailingslashit( get_stylesheet_directory_uri() ) . 'version.json';
+			$version_json_data = file_get_contents( $version_json_file );
+			static::$_version_data = json_decode( utf8_encode( $version_json_data ) );
 		}
-		return static::$_version;
+		return static::$_version_data;
+	}
+
+	static public function version() {
+		return static::getVersionData()->version;
+	}
+
+	static public function revision() {
+		return static::getVersionData()->revision;
 	}
 
 	static public function asset() {
@@ -60,7 +68,7 @@ class Glutton
 	*/
 	static public function bugsnag() {
 		$glutton_bugsnag_api_key = GLUTTON_BUGSNAG_API_KEY;
-		$glutton_app_version = Glutton::version();
+		$glutton_app_version = static::version();
 		echo <<<SNIPPET
 		<script src="//d2wy8f7a9ursnm.cloudfront.net/bugsnag-2.min.js"
 			data-apikey="{$glutton_bugsnag_api_key}"
@@ -69,12 +77,13 @@ SNIPPET;
 	}
 
 	/**
- 	* glutton_rollbar
+ 	* rollbar
  	*
  	* Echo out the rollbar snippet for JS error tracking
  	*/
 	static public function rollbar() {
 		$glutton_rollbar_access_token = GLUTTON_ROLLBAR_CLIENTSIDE_TOKEN;
+		$glutton_rollbar_code_version = static::revision();
 		$glutton_env = WP_ENV;
 		echo <<<SNIPPET
 		<script>
@@ -82,6 +91,13 @@ SNIPPET;
 			accessToken: "{$glutton_rollbar_access_token}",
 			captureUncaught: true,
 			payload: {
+				client: {
+					javascript: {
+						source_map_enabled: true,
+						code_version: "{$glutton_rollbar_code_version}",
+						guess_uncaught_frames: true
+					}
+				}
 				environment: "{$glutton_env}"
 			}
 		};

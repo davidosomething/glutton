@@ -1,6 +1,9 @@
-module.exports = ->
+module.exports = (grunt)->
 
   require('time-grunt')(this)
+
+  @initConfig
+    pkg: grunt.file.readJSON('package.json')
 
   @loadTasks 'config/grunt'
 
@@ -23,6 +26,7 @@ module.exports = ->
   ]
 
   @registerTask 'build', 'Build theme', [
+    'version'
     'shell:prebuild'
     'css'
     'js'
@@ -37,6 +41,7 @@ module.exports = ->
     # phpunit
     'karma:quick'
   ]
+
   @registerTask 'test', 'Run test suites, all browsers', [
     # phpunit
     'karma:all'
@@ -63,7 +68,21 @@ module.exports = ->
     'report'
   ]
 
-  @registerTask 'w', [
+  @registerTask 'version', 'Save the version.json file', ->
+    done = @async()
+    grunt.util.spawn {
+      cmd: 'git'
+      args: [ 'describe', '--always' ]
+    }, (err, result)->
+      grunt.file.write 'version.json', JSON.stringify({
+        version:  grunt.config('pkg.version')
+        revision: String(result)
+        date:     grunt.template.today()
+      })
+      done(result)
+    return @
+
+  @registerTask 'w', 'The real watch task', [
     'karma:watch:start'
     'watch'
   ]
@@ -72,3 +91,4 @@ module.exports = ->
     'build'
     'w'
   ]
+
