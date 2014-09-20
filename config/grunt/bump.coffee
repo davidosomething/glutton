@@ -14,6 +14,6 @@ module.exports = ->
       ]
       updateConfigs: []
       commit:        false
-      createTag:     false
+      createTag:     true
       push:          false
 
