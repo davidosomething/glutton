@@ -1,8 +1,15 @@
+// Libraries
 @import 'sassy-maps';
 
+// JSON variable maps
 @import '../json/breakpoints.json';
 @import '../json/colors.json';
 
+// Vendor files, likely copied over from a bower package
+// See
+// - grunt-bower-task config (it installs bower files to assets/bower)
+// - grunt-bower-task's exportsOverride in bower.json
+// - grunt-contrib-copy  (it copies/names css to assets/sass/vendor/_*)
 @import 'vendor/_normalize.scss';
 @import 'vendor/_h5bp-utility.scss';
 

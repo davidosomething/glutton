@@ -1,4 +1,35 @@
+_    = require 'lodash'
+path = require 'path'
+
 module.exports = ->
+
+  bowerJson = @file.readJSON "bower.json"
+
+  # getBowerCssOverrides
+  #
+  # Get a files array
+  #
+  # @return {array<object>}
+  getBowerCssOverrides = ->
+    sassVendorPath = 'assets/sass/vendor/'
+    bowerPath = 'assets/bower/'
+
+    # @return {object}
+    # @example cssFiles { { "normalize.css": { "css": "normalize.css" } } }
+    cssFiles = _.pick bowerJson.exportsOverride, (override)->
+      return _.has override, 'css'
+
+    # @return {array<object>}
+    # @example [ { 'assets/sass/vendor/_normalize.scss': 'assets/bower/normalize.css/css/normalize.css' } ]
+    cssFilesMap = _.map cssFiles, (contents, dir)->
+      result = {}
+      sassFilename = '_' + path.basename(dir, '.css') + '.scss'
+      key          = sassVendorPath + sassFilename
+      value        = bowerPath + dir + '/css/' + contents.css
+      result[key]  = value
+      return result
+
+    return cssFilesMap
 
   @loadNpmTasks 'grunt-contrib-copy'
 
@@ -8,7 +39,5 @@ module.exports = ->
 
   @config 'copy',
     dist:
-      files:
-        'assets/sass/vendor/_normalize.scss': 'assets/bower/normalize.css/css/normalize.css'
-        'assets/sass/vendor/_normalize-opentype.scss': 'assets/bower/normalize-opentype.css/css/normalize-opentype.css'
+      files: getBowerCssOverrides()
 
