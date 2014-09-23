@@ -1,15 +1,63 @@
+// main.scss
+// Main SCSS entry point
+
+// Requires Sass 3.4+
+// Requires Compass 3.4+
+
+////////////////////////////////////////////////////////////////////////////////
+// Bootstrapping
+////////////////////////////////////////////////////////////////////////////////
+
 // Libraries
+// sassy-maps -- sass map functions https://github.com/Team-Sass/Sassy-Maps
 @import 'sassy-maps';
+// bem mixins
+@import 'lib/_bem.scss';
 
-// JSON variable maps
-@import '../json/breakpoints.json';
-@import '../json/colors.json';
-
-// Vendor files, likely copied over from a bower package
+// Vendor sass
+// Files from 3rd party, likely copied over from a bower package
+// These don't get updated on watch since bower package updating should only be
+// done manually with regression testing
 // See
 // - grunt-bower-task config (it installs bower files to assets/bower)
 // - grunt-bower-task's exportsOverride in bower.json
 // - grunt-contrib-copy  (it copies/names css to assets/sass/vendor/_*)
 @import 'vendor/_normalize.scss';
 @import 'vendor/_h5bp-utility.scss';
+
+////////////////////////////////////////////////////////////////////////////////
+// Site
+//
+// The rest are sorted following @brad_frost and @dmolsen's atomic design
+// paradigm.
+// See http://patternlab.io/
+//
+////////////////////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////
+// Global
+////////////////////////////////////////
+
+// JSON variable maps
+// See https://github.com/vigetlabs/sass-json-vars
+// Properties shared with the JS app are read from JSON files
+@import '../json/breakpoints.json';
+@import '../json/colors.json';
+
+// SASS-only variables
+@import 'global/_variables';
+
+@import 'molecules/_item-tile';
+@import 'organisms/_items-list';
+
+////////////////////////////////////////
+// Pages
+////////////////////////////////////////
+
+// Critical path for homepage
+@import 'pages/_home';
+
+// DO NOT include uncommon pages like FAQ, About, etc.
+// Async load them to keep this file down to critical path for articles and
+// homepage view only.
 

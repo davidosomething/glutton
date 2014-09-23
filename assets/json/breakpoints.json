@@ -1,15 +1,15 @@
 {
-  "width": {
-    "iphone-portrait": "320px",
-    "iphone-landscape": "480px",
-    "iphone-retina-portrait": "640px",
-    "iphone-retina-landscape": "960px",
-    "iphone5-portrait": "640px",
-    "iphone5-landscape": "1136px",
-    "desktop": "960px",
-    "ipad-landscape": "768px",
-    "ipad-portrait": "1024px",
-    "ipad-retina-portrait": "1536px",
-    "ipad-retina-landscape": "2048px"
-  }
+	"device": {
+		"iphone-portrait":         [ 320 ],
+		"iphone-landscape":        [ 480 ],
+		"iphone-retina-portrait":  [ 640 ],
+		"iphone-retina-landscape": [ 960 ],
+		"iphone5-portrait":        [ 640 ],
+		"iphone5-landscape":       [ 1136 ],
+		"desktop":                 [ 960 ],
+		"ipad-landscape":          [ 768 ],
+		"ipad-portrait":           [ 1024 ],
+		"ipad-retina-portrait":    [ 1536 ],
+		"ipad-retina-landscape":   [ 2048 ]
+	}
 }

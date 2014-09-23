@@ -1,0 +1,15 @@
+// organisms/_items-list.scss
+// Items list
+//
+// Composed of molecules/_item-tile.scss
+
+.itemlist {
+  list-style: none;
+  padding: 0;
+
+  @include m(tiny) {
+
+  }
+
+}
+
