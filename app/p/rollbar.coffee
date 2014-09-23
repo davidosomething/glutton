@@ -1,9 +1,9 @@
 rollbar = require 'rollbar'
 
-GLUTTON_ROLLBAR_CLIENTSIDE_TOKEN = '32244710a5d547649d575a5dbd212fba'
+ROLLBAR_CLIENTSIDE_TOKEN = '32244710a5d547649d575a5dbd212fba'
 
 rollbarConfig =
-  accessToken: GLUTTON_ROLLBAR_CLIENTSIDE_TOKEN
+  accessToken: ROLLBAR_CLIENTSIDE_TOKEN
   captureUncaught: true
   payload:
     client:
@@ -15,3 +15,4 @@ rollbarConfig =
 
 rollbar.init(rollbarConfig)
 window.rollbar = rollbar
+

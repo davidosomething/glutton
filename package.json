@@ -17,7 +17,8 @@
     "underscore": "./assets/bower/lodash/js/lodash.underscore.min.js",
     "backbone": "./assets/bower/backbone/js/backbone.js",
     "jquery": "./assets/bower/jquery/js/jquery.min.js",
-    "rollbar": "./assets/bower/rollbar.js/js/rollbar.commonjs.min.js"
+    "rollbar": "./assets/bower/rollbar.js/js/rollbar.commonjs.min.js",
+    "bugsnag": "./assets/bower/bugsnag/js/bugsnag.js"
   },
   "browserify-shim": {
     "underscore": "_",

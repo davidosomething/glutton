@@ -8,6 +8,7 @@ Backbone.$ = $
 
 # Loggers
 require './p/rollbar'
+require './p/bugsnag'
 
 # App
 DefaultRouter = require './r/default'

@@ -24,6 +24,9 @@
 		"backbone": {
 			"js": "backbone.js"
 		},
+		"bugsnag": {
+			"js": "src/bugsnag.js"
+		},
 		"jquery": {
 			"js": "dist/jquery.min.js"
 		},
