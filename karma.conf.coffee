@@ -29,6 +29,7 @@ module.exports = (config)->
         'coffeeify'
         [
           'browserify-istanbul', { ignore: [
+            '**/assets/bower/**/*.*'
             '**/bower_components/**/*.*'
             '**/node_modules/**/*.*'
             '**/test/**/*.*'
