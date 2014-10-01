@@ -25,6 +25,16 @@ module.exports = ->
       browsers: ['PhantomJS']
       singleRun: true
 
+    report:
+      browsers: ['PhantomJS']
+      coverageReporter:
+        dir:    'reports/coverage/'
+        reporters: [
+          { type: 'html' }
+          { type: 'text-summary' }
+        ]
+      singleRun: true
+
     watch: # for dev
       background: true
       browsers: ['PhantomJS']
