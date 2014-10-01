@@ -76,7 +76,7 @@
     "lodash": "^2.4.1",
     "minifyify": "^4.2.0",
     "mocha": "^1.21.4",
-    "phantomjs": "^1.9.7-15",
+    "phantomjs": "^1.9.10",
     "sinon": "^1.10.3",
     "sinon-chai": "^2.5.0",
     "time-grunt": "^1.0.0"
