@@ -1,7 +1,5 @@
 module.exports = ->
 
-  @loadNpmTasks 'grunt-scss-lint'
-
   ############################################################################
 
   @config 'scsslint',

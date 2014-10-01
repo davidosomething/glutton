@@ -1,7 +1,5 @@
 module.exports = ->
 
-  @loadNpmTasks 'grunt-mocha-casperjs'
-
   @config 'mocha_casperjs',
     all:
       options:
