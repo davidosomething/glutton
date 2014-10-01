@@ -1,7 +1,5 @@
 module.exports = ->
 
-  @loadNpmTasks 'grunt-csswring'
-
   @config 'csswring',
     options:
       map: true

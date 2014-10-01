@@ -1,7 +1,5 @@
 module.exports = ->
 
-  @loadNpmTasks 'grunt-csscss'
-
   @config 'csscss',
     options:
       bundleExec: true

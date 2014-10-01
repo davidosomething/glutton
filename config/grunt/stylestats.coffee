@@ -1,7 +1,5 @@
 module.exports = ->
 
-  @loadNpmTasks 'grunt-stylestats'
-
   ############################################################################
   # Note this runs against a successfully built project
 

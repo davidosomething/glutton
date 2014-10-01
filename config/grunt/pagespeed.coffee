@@ -1,7 +1,5 @@
 module.exports = ->
 
-  @loadNpmTasks 'grunt-pagespeed'
-
   ############################################################################
   # Note this runs against a deployment
 

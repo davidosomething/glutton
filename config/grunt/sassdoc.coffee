@@ -1,7 +1,5 @@
 module.exports = ->
 
-  @loadNpmTasks 'grunt-sassdoc'
-
   ############################################################################
 
   @config 'sassdoc',

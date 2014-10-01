@@ -1,7 +1,5 @@
 module.exports = ->
 
-  @loadNpmTasks 'grunt-yslow'
-
   ############################################################################
   # Note this runs against a deployment
 

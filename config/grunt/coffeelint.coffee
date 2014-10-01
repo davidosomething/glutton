@@ -1,7 +1,5 @@
 module.exports = ->
 
-  @loadNpmTasks 'grunt-coffeelint'
-
   ############################################################################
 
   @config 'coffeelint',

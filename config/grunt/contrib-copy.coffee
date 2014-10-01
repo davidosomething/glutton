@@ -31,8 +31,6 @@ module.exports = ->
 
     return cssFilesMap
 
-  @loadNpmTasks 'grunt-contrib-copy'
-
   ############################################################################
   # Copy bower components to paths
   # @TODO want to eliminate this step and move to broccoli

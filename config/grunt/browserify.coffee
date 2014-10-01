@@ -3,8 +3,6 @@ minifyify = require 'minifyify'
 
 module.exports = ->
 
-  @loadNpmTasks 'grunt-browserify'
-
   ############################################################################
 
   #

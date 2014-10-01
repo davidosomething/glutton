@@ -1,7 +1,5 @@
 module.exports = ->
 
-  @loadNpmTasks 'grunt-autoprefixer'
-
   @config 'autoprefixer',
     options:
       browsers: [

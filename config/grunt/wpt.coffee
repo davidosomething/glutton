@@ -1,7 +1,5 @@
 module.exports = ->
 
-  @loadNpmTasks 'grunt-wpt'
-
   ############################################################################
   # Note this runs against a deployment
 

@@ -1,7 +1,5 @@
 module.exports = ->
 
-  @loadNpmTasks 'grunt-jsonlint'
-
   @config 'jsonlint',
     config:
       src: [

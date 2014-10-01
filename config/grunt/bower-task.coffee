@@ -1,7 +1,5 @@
 module.exports = ->
 
-  @loadNpmTasks 'grunt-bower-task'
-
   @config 'bower',
     install:
       options:
