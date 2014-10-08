@@ -3,8 +3,10 @@ module.exports = (grunt)->
   require('time-grunt')(this)
   require('load-grunt-config')(this, {
     jitGrunt:
-      scsslint:       'grunt-scss-lint'
-      mocha_casperjs: 'grunt-mocha-casperjs'
+      staticMappings:
+        bower:          'grunt-bower-task'
+        scsslint:       'grunt-scss-lint'
+        mocha_casperjs: 'grunt-mocha-casperjs'
   })
 
   @initConfig

@@ -42,6 +42,9 @@
 		"rollbar.js": {
 			"js": "dist/rollbar.commonjs.min.js"
 		},
+		"sass-mediaqueries": {
+			"scss": "_media-queries.scss"
+		},
 		"underscore": {
 			"js": "x"
 		}

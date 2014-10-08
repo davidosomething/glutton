@@ -11,10 +11,8 @@
 // Libraries
 // sassy-maps -- sass map functions https://github.com/Team-Sass/Sassy-Maps
 @import 'sassy-maps';
-// bem mixins
-@import 'lib/_bem.scss';
 // media query mixins
-@import 'media-queries';
+@import 'vendor/_media-queries';
 
 // Vendor sass
 // Files from 3rd party, likely copied over from a bower package

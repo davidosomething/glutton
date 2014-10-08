@@ -11,6 +11,9 @@ module.exports = ->
         noLineComments: true
         outputStyle:    'expanded'
         relativeAssets: true
-        require:        [ 'sassy-maps', 'sass-json-vars' ]
+        require:        [
+          'sassy-maps'
+          'sass-json-vars'
+        ]
         sassPath:       'assets/sass'
         sourcemap:      true
