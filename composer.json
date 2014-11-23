@@ -12,7 +12,7 @@
   ],
   "require": {
     "mustache/mustache": "~2.7.0",
-    "monolog/monolog": "1.10.*",
+    "monolog/monolog": "1.11.*",
     "rollbar/rollbar": "*"
   }
 }
