@@ -20,7 +20,7 @@ script:
   - grunt karma:ci
 
 after_script:
-  - grunt artifacts --force
+  #  - grunt artifacts --force
   - grunt coveralls
   - npm install -g codeclimate-test-reporter
   - cat reports/coverage/PhantomJS\ 1.9.7\ \(Linux\)/lcov.info | codeclimate
