@@ -18,7 +18,7 @@ before_script:
 script:
   - grunt release
   - grunt karma:ci
-  - grunt artifacts
+  - grunt artifacts --force
 
 after_script:
   - grunt coveralls
