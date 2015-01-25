@@ -6,7 +6,6 @@ module.exports = ->
     options:
       files: [
         'bower.json'
-        'composer.json'
         'package.json'
         'style.css'
       ]
