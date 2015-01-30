@@ -65,6 +65,7 @@ Managed by package managers and tmp folders
 
 | Service      | Status
 | -----------: | :--------
+| bitHound     | [![bitHound Score][bitHoundScore]][bitHoundLink]
 | Codeship     | [![Codeship Status for davidosomething/glutton][codeshipBadge]][codeshipLink]
 | Code Climate | [![Code Climate Coverage][codeClimateCoverageBadge]][codeClimateLink]
 | drone.io     | [![Build Status][droneIoBadge]][droneIoLink]
@@ -74,6 +75,8 @@ Managed by package managers and tmp folders
 
 ----
 
+[bitHoundScore]:    https://app.bithound.io/davidosomething/glutton/badges/score.svg
+[bitHoundLink]:     https://app.bithound.io/davidosomething/glutton
 [circleCIBadge]:    https://circleci.com/gh/davidosomething/glutton/tree/master.png?style=badge
 [circleCILink]:     https://circleci.com/gh/davidosomething/glutton/tree/master
 [codeClimateBadge]: https://codeclimate.com/github/davidosomething/glutton/badges/gpa.svg
