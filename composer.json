@@ -11,7 +11,7 @@
   ],
   "require": {
     "mustache/mustache": "~2.7.0",
-    "monolog/monolog": "1.11.*",
+    "monolog/monolog": "1.12.*",
     "rollbar/rollbar": "*"
   }
 }
