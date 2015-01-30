@@ -68,7 +68,6 @@ module.exports = (grunt)->
 
   @registerTask 'document', 'Run documentation generators', [
     'codo'
-    'sassdoc'
   ]
 
   @registerTask 'artifacts', 'Generate build artifacts', [

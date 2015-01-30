@@ -56,7 +56,6 @@
     "grunt-notify": "^0.4.1",
     "grunt-pagespeed": "^0.4.1",
     "grunt-perfbudget": "^0.1.5",
-    "grunt-sassdoc": "^1.2.1",
     "grunt-scss-lint": "^0.3.3",
     "grunt-shell": "^1.0.1",
     "grunt-stylestats": "^0.1.3",
