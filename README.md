@@ -16,6 +16,9 @@
 * Use `grunt w` instead of `grunt watch` so the phantomJS server can start
   first.
 
+* Use `grunt bower` after updating/changing `bower` installed components. This
+  is not run on build or watch since the deps are versioned.
+
 ## Paths
 
 ### Working
