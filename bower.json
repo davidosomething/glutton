@@ -14,12 +14,12 @@
   "dependencies": {
     "jquery": "~2.1.1",
     "backbone": "~1.1.2",
-    "lodash": "~2.4.1",
+    "lodash": "~3.0.1",
     "normalize.css": "~3.0.1",
     "normalize-opentype.css": "~0.2.0",
     "rollbar.js": "~1.1.8",
     "bugsnag": "~2.4.4",
-    "sass-mediaqueries": "~1.3.1"
+    "sass-mediaqueries": "~1.4.0"
   },
   "devDependencies": {},
   "exportsOverride": {
@@ -33,7 +33,7 @@
       "js": "dist/jquery.min.js"
     },
     "lodash": {
-      "js": "dist/lodash.underscore.min.js"
+      "js": "lodash.min.js"
     },
     "normalize.css": {
       "css": "normalize.css"

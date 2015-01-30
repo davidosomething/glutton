@@ -1,21 +1,26 @@
-/*! normalize-opentype v0.2.0 | MIT License | kennethormandy.com/journal/normalize-opentype-css */
+/*! normalize-opentype.css v0.2.3 | MIT License | kennethormandy.com/journal/normalize-opentype-css */
 /**
  * 1. Inherit style issues with custom selections, per robsterlini.co.uk/journal/opentype-and-selection-dont-mix
  * 2. Turn on kerning, standard ligatures, and proportional, oldstyle numerals
  *    Turn off all other ligatures, tabular, lining numerals, and alternates
+ * 3. Hard-codes fallback text selection for issue #18, color is Chrome’s per via http://stackoverflow.com/a/16094931/864799
  */
 ::-moz-selection {
   color: inherit;
   /* 1. */
   text-shadow: inherit;
-  /* 1. */ }
+  /* 2. */
+  background-color: #ACCEF7;
+  /* 3. */ }
 ::selection {
   color: inherit;
   /* 1. */
   text-shadow: inherit;
-  /* 1. */ }
+  /* 2. */
+  background-color: #ACCEF7;
+  /* 3. */ }
 
-html, body {
+html, body, table {
   -webkit-font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "dlig" 0;
      -moz-font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "dlig" 0;
           font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "dlig" 0;
@@ -115,20 +120,14 @@ input[type="color"], input[type="date"], input[type="datetime"], input[type="dat
 /* Tables
 ========================================================================== */
 /**
- * 1. Turns on tabular, lining numerals and slashed zero
- *    Turns off kerning, as it could impact tabular numerals
+ * 1. Resets tables to the same settings as the body.
+ * 2. Turns on tabular, lining numerals and slashed zero
  */
 table {
-  -webkit-font-feature-settings: "kern" 0, "liga" 1, "calt" 1, "pnum" 0, "tnum" 1, "onum" 0, "lnum" 1, "zero" 1;
-     -moz-font-feature-settings: "kern" 0, "liga" 1, "calt" 1, "pnum" 0, "tnum" 1, "onum" 0, "lnum" 1, "zero" 1;
-          font-feature-settings: "kern" 0, "liga" 1, "calt" 1, "pnum" 0, "tnum" 1, "onum" 0, "lnum" 1, "zero" 1;
-  /* 1. */ }
+  /* 1.*/ }
 
-/**
- * 1. Revert to defaults for table headings
- */
-table thead, table tfoot {
-  -webkit-font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "dlig" 0;
-     -moz-font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "dlig" 0;
-          font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "dlig" 0;
+tbody, caption {
+  -webkit-font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 0, "tnum" 1, "onum" 0, "lnum" 1, "zero" 1;
+     -moz-font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 0, "tnum" 1, "onum" 0, "lnum" 1, "zero" 1;
+          font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 0, "tnum" 1, "onum" 0, "lnum" 1, "zero" 1;
   /* 2. */ }

@@ -10,21 +10,7 @@
 //
 
 // The `Bugsnag` object is the only globally exported variable
-(function(definition) {
-  if (typeof define === "function" && define.amd) {
-    // AMD/Require.js
-    define(function () {
-      return definition(window);
-    });
-  } else if (typeof module === "object" && typeof module.exports === "object") {
-    // CommonJS/Browserify
-    module.exports = definition(global);
-  } else {
-    // Global
-    var old = window.Bugsnag;
-    window.Bugsnag = definition(window, old);
-  }
-})(function (window, old) {
+(function (window, old) {
   var self = {},
       lastEvent,
       lastScript,
@@ -235,7 +221,7 @@
   // Set up default notifier settings.
   var DEFAULT_BASE_ENDPOINT = "https://notify.bugsnag.com/";
   var DEFAULT_NOTIFIER_ENDPOINT = DEFAULT_BASE_ENDPOINT + "js";
-  var NOTIFIER_VERSION = "2.4.4";
+  var NOTIFIER_VERSION = "2.4.6";
 
   // Keep a reference to the currently executing script in the DOM.
   // We'll use this later to extract settings from attributes.
@@ -261,14 +247,22 @@
     }
     depth = depth + 1 || 1;
 
-    var str = [];
-    for (var p in obj) {
-      if (obj.hasOwnProperty(p) && p != null && obj[p] != null) {
-        var k = prefix ? prefix + "[" + p + "]" : p, v = obj[p];
-        str.push(typeof v === "object" ? serialize(v, k, depth) : encodeURIComponent(k) + "=" + encodeURIComponent(v));
+    try {
+      if (window.Node && obj instanceof window.Node) {
+        return encodeURIComponent(prefix) + "=" + encodeURIComponent(targetToString(obj));
       }
+
+      var str = [];
+      for (var p in obj) {
+        if (obj.hasOwnProperty(p) && p != null && obj[p] != null) {
+          var k = prefix ? prefix + "[" + p + "]" : p, v = obj[p];
+          str.push(typeof v === "object" ? serialize(v, k, depth) : encodeURIComponent(k) + "=" + encodeURIComponent(v));
+        }
+      }
+      return str.join("&");
+    } catch (e) {
+      return encodeURIComponent(prefix) + "=" + encodeURIComponent("" + e);
     }
-    return str.join("&");
   }
 
   // Deep-merge the `source` object into the `target` object and return
@@ -678,5 +672,23 @@
     });
   }
 
-  return self;
-});
+  window.Bugsnag = self;
+  // If people are using a javascript loader, we should integrate with it.
+  // We don't want to defer instrumenting their code with callbacks however,
+  // so we slightly abuse the intent and continue with our plan of polyfilling
+  // the browser whether or not they ever actually require the module.
+  // This has the nice side-effect of continuing to work when people are using
+  // AMD but loading Bugsnag via a CDN.
+  // It has the not-so-nice side-effect of polluting the global namespace, but
+  // you can easily call Bugsnag.noConflict() to fix that.
+  if (typeof define === "function" && define.amd) {
+    // AMD
+    define([], function () {
+      return self;
+    });
+  } else if (typeof module === "object" && typeof module.exports === "object") {
+    // CommonJS/Browserify
+    module.exports = self;
+  }
+
+})(window, window.Bugsnag);

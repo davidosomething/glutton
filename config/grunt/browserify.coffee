@@ -9,7 +9,7 @@ module.exports = ->
   # Browserify shimming
   #
 
-  pkg = @file.readJSON "package.json"
+  pkg = @file.readJSON 'package.json'
 
   getBrowserifyAlias = (name)->
     return pkg.browser[name] + ':' + name
